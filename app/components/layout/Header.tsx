@@ -1,14 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, ShoppingCart } from 'lucide-react';
 import { useCart } from '@/app/context/CartContext';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const { getTotalItems } = useCart();
     const totalItems = getTotalItems();
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     return (
         <header className="sticky top-0 z-50 bg-primary-900 text-white shadow-lg">
@@ -29,7 +34,7 @@ export default function Header() {
                         <a href="https://www.youtube.com/votre-chaine" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition">▶️</a>
                         <Link href="/panier" className="relative hover:text-yellow-300 transition flex items-center gap-1">
                             <ShoppingCart size={22} />
-                            {totalItems > 0 && (
+                            {mounted && totalItems > 0 && (
                                 <span className="absolute -top-2 -right-3 bg-yellow-400 text-primary-900 text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                                     {totalItems}
                                 </span>
@@ -51,7 +56,7 @@ export default function Header() {
                         <Link href="/contact" className="hover:text-yellow-300 transition" onClick={() => setIsOpen(false)}>📞 Contact</Link>
                         <Link href="/panier" className="hover:text-yellow-300 transition flex items-center gap-2" onClick={() => setIsOpen(false)}>
                             🛒 Panier
-                            {totalItems > 0 && (
+                            {mounted && totalItems > 0 && (
                                 <span className="bg-yellow-400 text-primary-900 text-xs font-bold rounded-full px-2 py-0.5">
                                     {totalItems}
                                 </span>

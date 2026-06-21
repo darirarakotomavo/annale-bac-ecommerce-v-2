@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function Hero() {
     return (
         <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700">
-            <div className="absolute inset-0 opacity-10 bg-[url('/images/pattern.png')] bg-repeat" />
+            {/* <div className="absolute inset-0 opacity-10 bg-[url('/images/pattern.png')] bg-repeat" /> */}
             <div className="container-custom relative z-10 text-center">
                 <motion.span
                     initial={{ opacity: 0, y: -20 }}
