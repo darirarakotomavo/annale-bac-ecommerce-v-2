@@ -16,7 +16,8 @@ export default function ProductCard({ product }: ProductCardProps) {
     const isEnseignant = product.isEnseignant;
 
     const phoneNumber = '261322462274';
-    const message = `Bonjour, je souhaite commander : ${product.name} (${product.price} €).`;
+    // Message WhatsApp sans mention du prix
+    const message = `Bonjour, je souhaite commander : ${product.name}`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     return (
@@ -27,6 +28,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                     <div className="flex flex-wrap gap-1">
                         {isPopular && <Badge variant="warning">⭐ Populaire</Badge>}
                         {isEnseignant && <Badge variant="purple">👨‍🏫 Enseignant</Badge>}
+                        {/* ✅ Ajout du badge "Gratuit" */}
+                        <Badge variant="success">🎁 Gratuit</Badge>
                     </div>
                 </div>
 
@@ -45,11 +48,13 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div className="flex flex-col gap-3">
                     <div className="flex items-end justify-between">
                         <div>
-                            <span className="text-2xl font-bold text-emerald-600">{product.price} €</span>
+                            {/* ✅ Prix barré + nouveau prix 0 € */}
+                            <span className="text-sm line-through text-gray-400 mr-2">{product.price} €</span>
+                            <span className="text-2xl font-bold text-emerald-600">0 €</span>
                             {product.pages > 0 && (
                                 <p className="text-xs text-gray-400">{product.pages} pages</p>
                             )}
-                            <p className="text-xs text-orange-500 font-medium mt-1">💬 Prix négociable</p>
+                            <p className="text-xs text-orange-500 font-medium mt-1">🎁 Offre découverte - Gratuit !</p>
                         </div>
                         <div className="flex gap-2">
                             <Button
