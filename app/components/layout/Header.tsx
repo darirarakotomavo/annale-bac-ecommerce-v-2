@@ -37,6 +37,9 @@ export default function Header() {
                         <Link href="/cours" className="hover:text-yellow-300 transition font-medium">
                             🎓 Cours
                         </Link>
+                        <Link href="/pdf-gratuits" className="hover:text-yellow-300 transition font-medium">
+                            📄 PDF Gratuits
+                        </Link>
                         <Link href="/about" className="hover:text-yellow-300 transition font-medium">
                             📖 À propos
                         </Link>
@@ -117,6 +120,13 @@ export default function Header() {
                             onClick={() => setIsOpen(false)}
                         >
                             🎓 Cours
+                        </Link>
+                        <Link
+                            href="/pdf-gratuits"
+                            className="hover:text-yellow-300 transition"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            📄 PDF Gratuits
                         </Link>
                         <Link
                             href="/about"

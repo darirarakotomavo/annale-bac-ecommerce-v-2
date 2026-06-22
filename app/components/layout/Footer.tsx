@@ -19,6 +19,7 @@ export default function Footer() {
                             <li><Link href="#products" className="hover:text-white transition">📚 Produits</Link></li>
                             <li><Link href="#order" className="hover:text-white transition">📥 Commander</Link></li>
                             <li><Link href="/cours" className="hover:text-white transition">🎓 Cours</Link></li>
+                            <li><Link href="/pdf-gratuits" className="hover:text-white transition">📄 PDF Gratuits</Link></li>
                             <li><Link href="/about" className="hover:text-white transition">📖 À propos</Link></li>
                             <li><Link href="/contact" className="hover:text-white transition">📞 Contact</Link></li>
                         </ul>
