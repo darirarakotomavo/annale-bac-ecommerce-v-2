@@ -2,7 +2,6 @@
 import Header from '@/app/components/layout/Header';
 import Footer from '@/app/components/layout/Footer';
 import { Card, CardBody } from '@/app/components/ui/Card';
-import { Button } from '@/app/components/ui/Button';
 import { FileDown, BookOpen, CheckCircle } from 'lucide-react';
 
 const pdfList = [
