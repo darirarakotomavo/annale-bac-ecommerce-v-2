@@ -2,7 +2,8 @@ import Header from '@/app/components/layout/Header';
 import Footer from '@/app/components/layout/Footer';
 import { Card, CardBody } from '@/app/components/ui/Card';
 import { connectToDatabase } from '@/app/lib/mongodb';
-import { Product } from '@/app/models/Product';
+import { Product } from '@/app/models/Product'; // ✅ Import du modèle
+import { Product as ProductType } from '@/app/types'; // ✅ Import du type
 import YoutubeEmbed from '@/app/components/social/YoutubeEmbed';
 
 async function getVideoProducts() {
@@ -28,11 +29,11 @@ export default async function VideosPage() {
                         <p className="text-center text-gray-500">Aucune vidéo disponible pour le moment.</p>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            {videos.map((video: any) => {
-                                const videoId = video.videoUrl.split('embed/')[1] || video.videoUrl.split('v=')[1];
+                            {videos.map((video: ProductType) => { // ✅ Typage correct
+                                const videoId = video.videoUrl?.split('embed/')[1] || video.videoUrl?.split('v=')[1];
                                 return (
                                     <Card key={video._id} hover>
-                                        <YoutubeEmbed videoId={videoId} title={video.name} />
+                                        <YoutubeEmbed videoId={videoId || ''} title={video.name} />
                                         <CardBody>
                                             <h3 className="font-bold text-lg text-gray-800">{video.name}</h3>
                                             <p className="text-sm text-gray-500">{video.description}</p>

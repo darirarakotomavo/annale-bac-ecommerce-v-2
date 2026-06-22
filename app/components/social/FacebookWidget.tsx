@@ -2,12 +2,12 @@
 
 import { useEffect, useRef } from 'react';
 
-declare global {
-    interface Window {
-        FB?: any;
-    }
+// ✅ Type spécifique pour le SDK Facebook
+interface FacebookSDK {
+    XFBML: {
+        parse: (element: HTMLElement) => void;
+    };
 }
-
 
 interface FacebookWidgetProps {
     pageUrl: string;
@@ -41,9 +41,10 @@ export default function FacebookWidget({
             document.head.appendChild(script);
         }
 
-        // Re-render le widget
-        if (window.FB && containerRef.current) {
-            window.FB.XFBML.parse(containerRef.current);
+        // ✅ Utilisation du type FacebookSDK
+        const fb = (window as Window & { FB?: FacebookSDK }).FB;
+        if (fb && containerRef.current) {
+            fb.XFBML.parse(containerRef.current);
         }
     }, []);
 
