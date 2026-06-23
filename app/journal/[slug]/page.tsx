@@ -4,19 +4,21 @@ import Footer from '@/app/components/layout/Footer';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { connectToDatabase } from '@/app/lib/mongodb';
-import { JournalPost } from '@/app/models/JournalPost';
+import { JournalPost, IJournalPost } from '@/app/models/JournalPost';
 import { Card, CardBody } from '@/app/components/ui/Card';
 import { Badge } from '@/app/components/ui/Badge';
 import { ArrowLeft } from 'lucide-react';
 
-async function getPost(slug: string) {
+async function getPost(slug: string): Promise<IJournalPost | null> {
     await connectToDatabase();
     const post = await JournalPost.findOne({ slug, isPublished: true });
     return post ? JSON.parse(JSON.stringify(post)) : null;
 }
 
-export default async function JournalPostPage({ params }: { params: { slug: string } }) {
-    const post = await getPost(params.slug);
+export default async function JournalPostPage({ params }: { params: Promise<{ slug: string }> }) {
+    // ✅ Résoudre la Promise params pour obtenir le slug
+    const { slug } = await params;
+    const post = await getPost(slug);
 
     if (!post) {
         notFound();
@@ -57,7 +59,7 @@ export default async function JournalPostPage({ params }: { params: { slug: stri
                                 </div>
                                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{post.title}</h1>
                                 <p className="text-sm text-gray-400">
-                                    Par {post.author} – {new Date(post.createdAt).toLocaleDateString('fr-FR', {
+                                    Par {post.author} – {new Date(post.createdAt as Date).toLocaleDateString('fr-FR', {
                                         day: 'numeric',
                                         month: 'long',
                                         year: 'numeric',
