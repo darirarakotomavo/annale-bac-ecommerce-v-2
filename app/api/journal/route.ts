@@ -8,7 +8,7 @@ export async function GET() {
         await connectToDatabase();
         const posts = await JournalPost.find({ isPublished: true }).sort({ createdAt: -1 });
         return NextResponse.json(posts);
-    } catch (error) {
+    } catch (errora) {
         return NextResponse.json(
             { error: 'Erreur lors de la récupération des articles' },
             { status: 500 }
