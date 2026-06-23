@@ -1,3 +1,4 @@
+// app/page.tsx
 import Header from '@/app/components/layout/Header';
 import Hero from '@/app/components/layout/Hero';
 import ProductCard from '@/app/components/shop/ProductCard';
@@ -7,6 +8,7 @@ import Footer from '@/app/components/layout/Footer';
 import { Product } from '@/app/types';
 import { connectToDatabase } from '@/app/lib/mongodb';
 import { Product as ProductModel } from '@/app/models/Product';
+import Link from 'next/link';
 
 async function getProducts(): Promise<Product[]> {
     await connectToDatabase();
@@ -23,7 +25,33 @@ export default async function Home() {
             <main>
                 <Hero />
 
-                {/* Section produits */}
+                {/* Section des deux piliers : Cours de révision Bac 2026 et Annales Bac 2025 */}
+                <section className="py-16 bg-white">
+                    <div className="container-custom">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                            <div className="bg-primary-50 rounded-2xl p-8 text-center shadow-md hover:shadow-xl transition">
+                                <div className="text-6xl mb-4">🎓</div>
+                                <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Cours de révision Bac 2026</h2>
+                                <p className="text-gray-600 mt-2">Série L (Littéraire) et S (Scientifique)</p>
+                                <p className="text-sm text-gray-500 mt-1">Préparez-vous intensivement en 27 jours</p>
+                                <Link href="/cours" className="mt-4 inline-block bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg font-semibold transition">
+                                    Accéder aux cours →
+                                </Link>
+                            </div>
+                            <div className="bg-yellow-50 rounded-2xl p-8 text-center shadow-md hover:shadow-xl transition">
+                                <div className="text-6xl mb-4">📚</div>
+                                <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Annales Bac 2025</h2>
+                                <p className="text-gray-600 mt-2">Toutes matières - Séries S et L</p>
+                                <p className="text-sm text-gray-500 mt-1">Sujets et corrigés complets</p>
+                                <Link href="/pdf-gratuits" className="mt-4 inline-block bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-lg font-semibold transition">
+                                    Voir les annales →
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Section produits (existant) */}
                 <section id="products" className="py-16 bg-gray-50">
                     <div className="container-custom">
                         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-2">
@@ -40,7 +68,6 @@ export default async function Home() {
                     </div>
                 </section>
 
-                {/* Section commande */}
                 <section id="order" className="py-16 bg-white">
                     <div className="container-custom">
                         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-2">
