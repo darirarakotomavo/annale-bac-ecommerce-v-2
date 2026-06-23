@@ -143,11 +143,32 @@ Ce planning est conçu pour les élèves qui veulent une préparation **intensiv
 
 ## 📅 Structure générale (27 jours)
 
-| Période | Jours | Objectif |
-|---------|-------|----------|
-| **Phase 1 : Diagnostic et bases** | J1 – J5 | Identifier les lacunes, réviser les fondamentaux |
-| **Phase 2 : Approfondissement** | J6 – J15 | Traiter les exercices types et les sujets d'annales |
-| **Phase 3 : Intensif final** | J16 – J27 | Enchaîner les sujets complets, simuler l'examen, gérer le stress |
+<table style="width:100%; border-collapse: collapse; background: #f8fafc; border-radius: 8px; overflow: hidden; margin: 16px 0;">
+  <thead>
+    <tr style="background: #1e3a5f; color: white;">
+      <th style="padding: 10px 16px; text-align: left; border: 1px solid #e2e8f0;">Période</th>
+      <th style="padding: 10px 16px; text-align: left; border: 1px solid #e2e8f0;">Jours</th>
+      <th style="padding: 10px 16px; text-align: left; border: 1px solid #e2e8f0;">Objectif</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background: white;">
+      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;"><strong>Phase 1 : Diagnostic et bases</strong></td>
+      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;">J1 – J5</td>
+      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;">Identifier les lacunes, réviser les fondamentaux</td>
+    </tr>
+    <tr style="background: #f8fafc;">
+      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;"><strong>Phase 2 : Approfondissement</strong></td>
+      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;">J6 – J15</td>
+      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;">Traiter les exercices types et les sujets d'annales</td>
+    </tr>
+    <tr style="background: white;">
+      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;"><strong>Phase 3 : Intensif final</strong></td>
+      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;">J16 – J27</td>
+      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;">Enchaîner les sujets complets, simuler l'examen, gérer le stress</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
