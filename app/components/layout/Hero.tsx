@@ -3,6 +3,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import JourCountdown from '@/app/components/JourCountdown';
 
 export default function Hero() {
     return (
@@ -15,7 +16,7 @@ export default function Hero() {
                     transition={{ duration: 0.5 }}
                     className="inline-block bg-yellow-400 text-primary-900 px-4 py-1 rounded-full text-sm font-semibold mb-4"
                 >
-                    📚 Bac 2026 – J-27
+                    📚 Bac 2026 – <JourCountdown />
                 </motion.span>
 
                 <motion.h1
