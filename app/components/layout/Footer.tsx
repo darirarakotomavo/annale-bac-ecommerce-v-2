@@ -18,7 +18,8 @@ export default function Footer() {
                         <ul className="space-y-2 text-sm">
                             <li><Link href="#products" className="hover:text-white transition">📚 Produits</Link></li>
                             <li><Link href="#order" className="hover:text-white transition">📥 Commander</Link></li>
-                            <li><Link href="/cours" className="hover:text-white transition">🎓 Cours</Link></li>
+                            <li><Link href="/cours" className="hover:text-white transition">🎓 Révision Bac 2026</Link></li>
+                            <li><Link href="/journal" className="hover:text-white transition">📖 Journal</Link></li>
                             <li><Link href="/pdf-gratuits" className="hover:text-white transition">📄 PDF Gratuits</Link></li>
                             <li><Link href="/about" className="hover:text-white transition">📖 À propos</Link></li>
                             <li><Link href="/contact" className="hover:text-white transition">📞 Contact</Link></li>

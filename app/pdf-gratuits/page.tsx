@@ -76,7 +76,8 @@ export default function PdfGratuitsPage() {
                                         <span className="text-xs text-gray-400">{pdf.fileSize}</span>
                                         <a
                                             href={`/pdfs/${pdf.fileName}`}
-                                            download
+                                            download={pdf.fileName}
+                                            type="application/pdf"
                                             className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg font-semibold transition shadow hover:shadow-lg text-sm"
                                         >
                                             <FileDown size={16} />

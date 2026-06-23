@@ -21,12 +21,10 @@ export default function Header() {
         <header className="sticky top-0 z-50 bg-primary-900 text-white shadow-lg">
             <div className="container-custom py-4">
                 <div className="flex items-center justify-between">
-                    {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition">
                         <h1 className="text-xl md:text-2xl font-bold">📚 Annales Bac S 2025</h1>
                     </Link>
 
-                    {/* Navigation desktop */}
                     <nav className="hidden lg:flex items-center gap-6">
                         <Link href="/#products" className="hover:text-yellow-300 transition font-medium">
                             📚 Produits
@@ -35,7 +33,10 @@ export default function Header() {
                             📥 Commander
                         </Link>
                         <Link href="/cours" className="hover:text-yellow-300 transition font-medium">
-                            🎓 Cours
+                            🎓 Révision Bac 2026
+                        </Link>
+                        <Link href="/journal" className="hover:text-yellow-300 transition font-medium">
+                            📖 Journal
                         </Link>
                         <Link href="/pdf-gratuits" className="hover:text-yellow-300 transition font-medium">
                             📄 PDF Gratuits
@@ -47,7 +48,6 @@ export default function Header() {
                             📞 Contact
                         </Link>
 
-                        {/* Réseaux sociaux (emoji) */}
                         <a
                             href="https://www.facebook.com/votre-profil"
                             target="_blank"
@@ -76,7 +76,6 @@ export default function Header() {
                             ▶️
                         </a>
 
-                        {/* Panier */}
                         <Link href="/panier" className="relative hover:text-yellow-300 transition flex items-center gap-1">
                             <ShoppingCart size={22} />
                             {mounted && totalItems > 0 && (
@@ -87,7 +86,6 @@ export default function Header() {
                         </Link>
                     </nav>
 
-                    {/* Bouton menu mobile */}
                     <button
                         className="lg:hidden"
                         onClick={() => setIsOpen(!isOpen)}
@@ -97,7 +95,6 @@ export default function Header() {
                     </button>
                 </div>
 
-                {/* Menu mobile déroulant */}
                 {isOpen && (
                     <nav className="lg:hidden mt-4 flex flex-col gap-4 border-t border-gray-700 pt-4">
                         <Link
@@ -119,7 +116,14 @@ export default function Header() {
                             className="hover:text-yellow-300 transition"
                             onClick={() => setIsOpen(false)}
                         >
-                            🎓 Cours
+                            🎓 Révision Bac 2026
+                        </Link>
+                        <Link
+                            href="/journal"
+                            className="hover:text-yellow-300 transition"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            📖 Journal
                         </Link>
                         <Link
                             href="/pdf-gratuits"

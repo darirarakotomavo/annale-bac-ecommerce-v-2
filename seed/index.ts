@@ -1,6 +1,7 @@
 import { connectToDatabase } from "@/app/lib/mongodb";
 import { Product } from "@/app/models/Product";
 import { Course } from "@/app/models/Course";
+import { JournalPost } from "@/app/models/JournalPost";
 
 const productsData = [
   {
@@ -125,6 +126,87 @@ const coursesData = [
   },
 ];
 
+// === DONNÉES DU JOURNAL (UN SEUL BLOC) ===
+const journalPostsData = [
+  {
+    title: "📘 Plan de révision accélérée pour le Bac 2026",
+    slug: "plan-revision-acceleree-bac-2026",
+    excerpt:
+      "Découvrez mon planning de révision sur 2 mois pour maximiser vos chances de réussite au Bac 2026.",
+    content: `# Plan de révision accélérée - Bac 2026
+
+## Semaine 1-2 : Évaluation et diagnostic
+- Faire un test complet de chaque matière
+- Identifier les points faibles
+- Établir un planning personnalisé
+
+## Semaine 3-4 : Renforcement des bases
+- Revoir les notions fondamentales
+- Faire des exercices d'application
+- Utiliser les vidéos YouTube
+
+## Semaine 5-6 : Approfondissement
+- Traiter les exercices types
+- Analyser les sujets des années précédentes
+- Travail sur la méthodologie
+
+## Semaine 7-8 : Révision intensive
+- Enchaîner les sujets complets
+- Simulation d'examen
+- Gestion du stress
+
+## Conseils clés
+- 2h de révision par jour minimum
+- Alterner les matières
+- Ne pas négliger le sommeil`,
+    tags: ["révision", "bac2026", "planning"],
+  },
+  {
+    title: "🎯 Les 5 erreurs à éviter en révision",
+    slug: "erreurs-a-eviter-revision",
+    excerpt:
+      "Voici les erreurs les plus fréquentes que font les élèves en révision et comment les éviter.",
+    content: `# Les 5 erreurs à éviter en révision
+
+## 1. La passivité
+Ne vous contentez pas de lire vos cours. Prenez des notes, faites des schémas, expliquez à voix haute.
+
+## 2. La procrastination
+Ne remettez pas à demain ce que vous pouvez faire aujourd'hui. Commencez par les sujets que vous maîtrisez le moins.
+
+## 3. Le manque de sommeil
+Un cerveau fatigué n'apprend pas. Dormez au moins 7h par nuit.
+
+## 4. L'isolement
+Réviser seul, c'est bien. Réviser en groupe avec les bons camarades, c'est mieux.
+
+## 5. L'absence de pause
+Le cerveau a besoin de pauses pour assimiler. Méthode Pomodoro : 25 min de travail, 5 min de pause.`,
+    tags: ["conseils", "révision", "méthodologie"],
+  },
+  {
+    title: "📚 Les meilleures ressources pour le Bac 2026",
+    slug: "ressources-bac-2026",
+    excerpt:
+      "Une sélection des meilleures ressources (PDF, vidéos, sites) pour préparer le Bac 2026.",
+    content: `# Les meilleures ressources pour le Bac 2026
+
+## Ressources gratuites
+- Annales des années précédentes
+- Les corrigés que je partage sur ce site
+- Les vidéos YouTube de préparation
+
+## Ressources payantes (recommandées)
+- Les cours particuliers (contactez-moi)
+- Les packs de révision complets
+
+## À venir
+- Une série de vidéos exclusives
+- Des sessions de révision en direct sur Facebook`,
+    tags: ["ressources", "bac2026", "recommandations"],
+  },
+];
+
 async function seed() {
   console.log("🔗 Connexion à MongoDB...");
   await connectToDatabase();
@@ -143,6 +225,14 @@ async function seed() {
   const courses = await Course.insertMany(coursesData);
   console.log(`✅ ${courses.length} cours insérés`);
 
+  // === JOURNAL POSTS ===
+  console.log("🗑️ Suppression des anciens articles du journal...");
+  await JournalPost.deleteMany({});
+
+  console.log("📦 Insertion des articles du journal...");
+  const journalPosts = await JournalPost.insertMany(journalPostsData);
+  console.log(`✅ ${journalPosts.length} articles du journal insérés`);
+
   console.log("📋 Liste des produits :");
   products.forEach((p) =>
     console.log(`  - ${p.icon} ${p.name} (${p.price} €)`)
@@ -150,6 +240,11 @@ async function seed() {
 
   console.log("📋 Liste des cours :");
   courses.forEach((c) => console.log(`  - 🎓 ${c.title} (${c.price} €)`));
+
+  console.log("📋 Liste des articles du journal :");
+  journalPosts.forEach((post) =>
+    console.log(`  - 📖 ${post.title} (${post.slug})`)
+  );
 
   console.log("✅ Seed terminé avec succès !");
   process.exit(0);
