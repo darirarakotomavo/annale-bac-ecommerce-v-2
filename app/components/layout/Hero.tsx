@@ -7,14 +7,14 @@ import JourCountdown from '@/app/components/JourCountdown';
 
 export default function Hero() {
     return (
-        <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700">
+        <section className="relative py-12 md:py-20 overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700">
             <div className="absolute inset-0 opacity-10 bg-[url('/images/pattern.png')] bg-repeat" />
             <div className="container-custom relative z-10 text-center">
                 <motion.span
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="inline-block bg-yellow-400 text-primary-900 px-4 py-1 rounded-full text-sm font-semibold mb-4"
+                    className="inline-block bg-yellow-400 text-primary-900 px-4 py-1 rounded-full text-sm font-bold mb-4"
                 >
                     📚 Bac 2026 – <JourCountdown />
                 </motion.span>
@@ -41,7 +41,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8"
+                    className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mb-8 font-medium"
                 >
                     Préparez-vous intensivement pour le Bac 2026 avec des cours adaptés (Séries L et S) et les annales 2025 toutes matières.
                 </motion.p>
@@ -52,10 +52,10 @@ export default function Hero() {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="flex flex-wrap gap-4 justify-center"
                 >
-                    <Link href="/cours" className="btn-primary bg-yellow-400 hover:bg-yellow-500 text-primary-900">
+                    <Link href="/cours" className="btn-primary bg-yellow-400 hover:bg-yellow-500 text-primary-900 font-bold">
                         🎓 Cours de révision
                     </Link>
-                    <Link href="/pdf-gratuits" className="btn-secondary bg-transparent border-white text-white hover:bg-white hover:text-primary-900">
+                    <Link href="/pdf-gratuits" className="btn-secondary bg-transparent border-white text-white hover:bg-white hover:text-primary-900 font-bold">
                         📄 Annales 2025
                     </Link>
                 </motion.div>
@@ -64,7 +64,7 @@ export default function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="mt-12 flex flex-wrap gap-6 justify-center text-sm text-gray-300"
+                    className="mt-12 flex flex-wrap gap-6 justify-center text-sm text-gray-200 font-medium"
                 >
                     <span>✅ Séries L & S</span>
                     <span>✅ Toutes matières</span>

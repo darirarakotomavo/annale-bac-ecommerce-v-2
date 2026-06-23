@@ -1,60 +1,65 @@
-import type { Config } from "tailwindcss";
+// tailwind.config.ts
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        primary: {
-          50: "#e8f0fe",
-          100: "#d1e0fd",
-          200: "#a3c1fb",
-          300: "#75a2f9",
-          400: "#4783f7",
-          500: "#1a64f5",
-          600: "#1550c4",
-          700: "#103c93",
-          800: "#0a2862",
-          900: "#051431",
+    content: [
+        './pages/**/*.{js,ts,jsx,tsx,mdx}',
+        './components/**/*.{js,ts,jsx,tsx,mdx}',
+        './app/**/*.{js,ts,jsx,tsx,mdx}',
+    ],
+    theme: {
+        extend: {
+            spacing: {
+                '0.5': '0.05rem',
+                '1': '0.1rem',
+                '2': '0.2rem',
+                '3': '0.3rem',
+                '4': '0.4rem',
+                '5': '0.5rem',
+                '6': '0.6rem',
+                '8': '0.8rem',
+                '10': '1rem',
+                '12': '1.2rem',
+                '16': '1.6rem',
+                '20': '2rem',
+                '24': '2.4rem',
+                '32': '3.2rem',
+                '40': '4rem',
+            },
+            fontSize: {
+                xs: ['0.7rem', { lineHeight: '1' }],
+                sm: ['0.8rem', { lineHeight: '1.1' }],
+                base: ['0.9rem', { lineHeight: '1.2' }],
+                lg: ['1.0rem', { lineHeight: '1.2' }],
+                xl: ['1.1rem', { lineHeight: '1.2' }],
+                '2xl': ['1.3rem', { lineHeight: '1.2' }],
+                '3xl': ['1.6rem', { lineHeight: '1.1' }],
+                '4xl': ['2.0rem', { lineHeight: '1.1' }],
+                '5xl': ['2.4rem', { lineHeight: '1.1' }],
+                '6xl': ['3.0rem', { lineHeight: '1.1' }],
+            },
+            colors: {
+                primary: {
+                    50: '#e8f0fe',
+                    100: '#d1e0fd',
+                    200: '#a3c1fb',
+                    300: '#75a2f9',
+                    400: '#4783f7',
+                    500: '#1a64f5',
+                    600: '#1550c4',
+                    700: '#103c93',
+                    800: '#0a2862',
+                    900: '#051431',
+                },
+                // Ajout de couleurs de texte foncées
+                text: {
+                    DEFAULT: '#000000',
+                    light: '#1a1a1a',
+                },
+            },
         },
-        secondary: {
-          50: "#e6f7ed",
-          100: "#ccefdb",
-          200: "#99dfb7",
-          300: "#66cf93",
-          400: "#33bf6f",
-          500: "#00af4b",
-          600: "#008c3c",
-          700: "#00692d",
-          800: "#00461e",
-          900: "#00230f",
-        },
-      },
-      fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-      },
-      animation: {
-        "fade-in": "fadeIn 0.5s ease-in-out",
-        "slide-up": "slideUp 0.3s ease-out",
-        "bounce-slow": "bounce 2s infinite",
-      },
-      keyframes: {
-        fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
-        slideUp: {
-          "0%": { transform: "translateY(20px)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
-        },
-      },
     },
-  },
-  plugins: [],
+    plugins: [],
 };
 
 export default config;
