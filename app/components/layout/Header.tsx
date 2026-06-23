@@ -11,7 +11,7 @@ export default function Header() {
     const { getTotalItems } = useCart();
     const totalItems = getTotalItems();
 
-    // Résout l'erreur d'hydratation entre le serveur et le client
+    // Résout l'erreur d'hydratation
     useEffect(() => {
         // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true);
@@ -19,40 +19,43 @@ export default function Header() {
 
     return (
         <header className="sticky top-0 z-50 bg-primary-900 text-white shadow-lg">
-            <div className="container-custom py-4">
+            <div className="container-custom py-2">
                 <div className="flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition">
-                        <h1 className="text-xl md:text-2xl font-bold">📚 Annales Bac S 2025</h1>
+                    {/* Logo */}
+                    <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition">
+                        <h1 className="text-xl md:text-2xl font-bold text-white">📚 Annales Bac S 2025</h1>
                     </Link>
 
+                    {/* Navigation desktop - texte blanc */}
                     <nav className="hidden lg:flex items-center gap-6">
-                        <Link href="/#products" className="hover:text-yellow-300 transition font-medium">
+                        <Link href="/#products" className="text-white hover:text-yellow-300 transition font-medium">
                             📚 Produits
                         </Link>
-                        <Link href="/#order" className="hover:text-yellow-300 transition font-medium">
+                        <Link href="/#order" className="text-white hover:text-yellow-300 transition font-medium">
                             📥 Commander
                         </Link>
-                        <Link href="/cours" className="hover:text-yellow-300 transition font-medium">
+                        <Link href="/cours" className="text-white hover:text-yellow-300 transition font-medium">
                             🎓 Révision Bac 2026
                         </Link>
-                        <Link href="/journal" className="hover:text-yellow-300 transition font-medium">
+                        <Link href="/journal" className="text-white hover:text-yellow-300 transition font-medium">
                             📖 Journal
                         </Link>
-                        <Link href="/pdf-gratuits" className="hover:text-yellow-300 transition font-medium">
+                        <Link href="/pdf-gratuits" className="text-white hover:text-yellow-300 transition font-medium">
                             📄 PDF Gratuits
                         </Link>
-                        <Link href="/about" className="hover:text-yellow-300 transition font-medium">
+                        <Link href="/about" className="text-white hover:text-yellow-300 transition font-medium">
                             📖 À propos
                         </Link>
-                        <Link href="/contact" className="hover:text-yellow-300 transition font-medium">
+                        <Link href="/contact" className="text-white hover:text-yellow-300 transition font-medium">
                             📞 Contact
                         </Link>
 
+                        {/* Réseaux sociaux */}
                         <a
                             href="https://www.facebook.com/votre-profil"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-yellow-300 transition"
+                            className="text-white hover:text-yellow-300 transition"
                             aria-label="Facebook"
                         >
                             📘
@@ -61,7 +64,7 @@ export default function Header() {
                             href="https://www.instagram.com/votre-profil"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-yellow-300 transition"
+                            className="text-white hover:text-yellow-300 transition"
                             aria-label="Instagram"
                         >
                             📸
@@ -70,13 +73,14 @@ export default function Header() {
                             href="https://www.youtube.com/votre-chaine"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-yellow-300 transition"
+                            className="text-white hover:text-yellow-300 transition"
                             aria-label="YouTube"
                         >
                             ▶️
                         </a>
 
-                        <Link href="/panier" className="relative hover:text-yellow-300 transition flex items-center gap-1">
+                        {/* Panier */}
+                        <Link href="/panier" className="relative text-white hover:text-yellow-300 transition flex items-center gap-1">
                             <ShoppingCart size={22} />
                             {mounted && totalItems > 0 && (
                                 <span className="absolute -top-2 -right-3 bg-yellow-400 text-primary-900 text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
@@ -86,8 +90,9 @@ export default function Header() {
                         </Link>
                     </nav>
 
+                    {/* Bouton menu mobile */}
                     <button
-                        className="lg:hidden"
+                        className="lg:hidden text-white hover:text-yellow-300 transition"
                         onClick={() => setIsOpen(!isOpen)}
                         aria-label="Menu"
                     >
@@ -95,60 +100,61 @@ export default function Header() {
                     </button>
                 </div>
 
+                {/* Menu mobile - texte blanc */}
                 {isOpen && (
-                    <nav className="lg:hidden mt-4 flex flex-col gap-4 border-t border-gray-700 pt-4">
+                    <nav className="lg:hidden mt-4 flex flex-col gap-3 border-t border-gray-600 pt-4">
                         <Link
                             href="/#products"
-                            className="hover:text-yellow-300 transition"
+                            className="text-white hover:text-yellow-300 transition"
                             onClick={() => setIsOpen(false)}
                         >
                             📚 Produits
                         </Link>
                         <Link
                             href="/#order"
-                            className="hover:text-yellow-300 transition"
+                            className="text-white hover:text-yellow-300 transition"
                             onClick={() => setIsOpen(false)}
                         >
                             📥 Commander
                         </Link>
                         <Link
                             href="/cours"
-                            className="hover:text-yellow-300 transition"
+                            className="text-white hover:text-yellow-300 transition"
                             onClick={() => setIsOpen(false)}
                         >
                             🎓 Révision Bac 2026
                         </Link>
                         <Link
                             href="/journal"
-                            className="hover:text-yellow-300 transition"
+                            className="text-white hover:text-yellow-300 transition"
                             onClick={() => setIsOpen(false)}
                         >
                             📖 Journal
                         </Link>
                         <Link
                             href="/pdf-gratuits"
-                            className="hover:text-yellow-300 transition"
+                            className="text-white hover:text-yellow-300 transition"
                             onClick={() => setIsOpen(false)}
                         >
                             📄 PDF Gratuits
                         </Link>
                         <Link
                             href="/about"
-                            className="hover:text-yellow-300 transition"
+                            className="text-white hover:text-yellow-300 transition"
                             onClick={() => setIsOpen(false)}
                         >
                             📖 À propos
                         </Link>
                         <Link
                             href="/contact"
-                            className="hover:text-yellow-300 transition"
+                            className="text-white hover:text-yellow-300 transition"
                             onClick={() => setIsOpen(false)}
                         >
                             📞 Contact
                         </Link>
                         <Link
                             href="/panier"
-                            className="hover:text-yellow-300 transition flex items-center gap-2"
+                            className="text-white hover:text-yellow-300 transition flex items-center gap-2"
                             onClick={() => setIsOpen(false)}
                         >
                             🛒 Panier
@@ -158,12 +164,12 @@ export default function Header() {
                                 </span>
                             )}
                         </Link>
-                        <div className="flex gap-4 pt-2 border-t border-gray-700">
+                        <div className="flex gap-4 pt-2 border-t border-gray-600">
                             <a
                                 href="https://www.facebook.com/votre-profil"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:text-yellow-300 transition"
+                                className="text-white hover:text-yellow-300 transition"
                             >
                                 📘
                             </a>
@@ -171,7 +177,7 @@ export default function Header() {
                                 href="https://www.instagram.com/votre-profil"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:text-yellow-300 transition"
+                                className="text-white hover:text-yellow-300 transition"
                             >
                                 📸
                             </a>
@@ -179,7 +185,7 @@ export default function Header() {
                                 href="https://www.youtube.com/votre-chaine"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:text-yellow-300 transition"
+                                className="text-white hover:text-yellow-300 transition"
                             >
                                 ▶️
                             </a>
