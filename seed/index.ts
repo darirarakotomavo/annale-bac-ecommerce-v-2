@@ -132,34 +132,88 @@ const journalPostsData = [
     title: "📘 Plan de révision accélérée pour le Bac 2026",
     slug: "plan-revision-acceleree-bac-2026",
     excerpt:
-      "Découvrez mon planning de révision sur 2 mois pour maximiser vos chances de réussite au Bac 2026.",
-    content: `# Plan de révision accélérée - Bac 2026
+      "Un planning intensif sur 27 jours pour maximiser vos chances de réussite au Bac 2026.",
+    content: `# Plan de révision accélérée – 27 jours pour le Bac 2026
 
-## Semaine 1-2 : Évaluation et diagnostic
-- Faire un test complet de chaque matière
-- Identifier les points faibles
-- Établir un planning personnalisé
+## Objectif : 27 jours pour tout maîtriser
 
-## Semaine 3-4 : Renforcement des bases
-- Revoir les notions fondamentales
-- Faire des exercices d'application
-- Utiliser les vidéos YouTube
+Ce planning est conçu pour les élèves qui veulent une préparation **intensive et structurée** jusqu'au jour J (20 juillet 2026). Chaque journée est décomposée en sessions de travail, avec des objectifs clairs.
 
-## Semaine 5-6 : Approfondissement
-- Traiter les exercices types
-- Analyser les sujets des années précédentes
-- Travail sur la méthodologie
+---
 
-## Semaine 7-8 : Révision intensive
-- Enchaîner les sujets complets
-- Simulation d'examen
-- Gestion du stress
+## 📅 Structure générale (27 jours)
 
-## Conseils clés
-- 2h de révision par jour minimum
-- Alterner les matières
-- Ne pas négliger le sommeil`,
-    tags: ["révision", "bac2026", "planning"],
+| Période | Jours | Objectif |
+|---------|-------|----------|
+| **Phase 1 : Diagnostic et bases** | J1 – J5 | Identifier les lacunes, réviser les fondamentaux |
+| **Phase 2 : Approfondissement** | J6 – J15 | Traiter les exercices types et les sujets d'annales |
+| **Phase 3 : Intensif final** | J16 – J27 | Enchaîner les sujets complets, simuler l'examen, gérer le stress |
+
+---
+
+## 🗓️ Détail des 27 jours
+
+### 🔍 Phase 1 – Diagnostic et bases (J1 à J5)
+
+- **J1** : Faire un test complet en **Mathématiques** (sujet type Bac) – noter les difficultés.
+- **J2** : Faire un test complet en **Sciences Physiques** – identifier les chapitres à revoir.
+- **J3** : Revoir les **formules clés** en Maths et Physique (créer une fiche mémo).
+- **J4** : Réviser les **chapitres les plus faibles** identifiés (vidéos YouTube + fiches).
+- **J5** : Faire un **deuxième test** (plus court) pour valider les progrès – ajuster le planning.
+
+---
+
+### 📚 Phase 2 – Approfondissement (J6 à J15)
+
+- **J6** : Exercices sur les **suites et fonctions** (Maths).
+- **J7** : Exercices sur la **mécanique** (Physique).
+- **J8** : Exercices sur la **géométrie** (Maths).
+- **J9** : Exercices sur l'**électricité** (Physique).
+- **J10** : Exercices sur **probabilités et statistiques** (Maths).
+- **J11** : Exercices sur **l'optique et les ondes** (Physique).
+- **J12** : **Annales 2024 – Maths** (sujet complet, temps limité).
+- **J13** : **Annales 2024 – Physique** (sujet complet, temps limité).
+- **J14** : Correction détaillée des annales – identifier les erreurs récurrentes.
+- **J15** : Révision des **points bloquants** + fiche de synthèse.
+
+---
+
+### 🚀 Phase 3 – Intensif final (J16 à J27)
+
+- **J16** : Annales 2023 – Maths (sujet complet).
+- **J17** : Annales 2023 – Physique (sujet complet).
+- **J18** : Correction et analyse des copies.
+- **J19** : **Simulation** – Maths (9h-12h) puis correction.
+- **J20** : **Simulation** – Physique (14h-17h) puis correction.
+- **J21** : Révision des **méthodologies** (rédaction, gestion du temps).
+- **J22** : Annales 2022 – Maths.
+- **J23** : Annales 2022 – Physique.
+- **J24** : Correction + reprise des erreurs.
+- **J25** : **Simulation complète** – Maths + Physique en conditions réelles.
+- **J26** : Correction de la simulation – dernier point de méthode.
+- **J27** : **Relaxation** (lecture des fiches, exercices légers) – préparation mentale.
+
+---
+
+## 📌 Conseils pour chaque journée
+
+- **Matin (2h)** : Révision active (exercices, sujets).
+- **Après-midi (2h)** : Correction et analyse des erreurs.
+- **Soir (1h)** : Fiche de synthèse ou lecture rapide.
+
+**Ne négligez pas :**
+- Le sommeil (7h par nuit minimum)
+- Les pauses (méthode Pomodoro – 25 min travail / 5 min pause)
+- L'alimentation et l'hydratation
+
+---
+
+## 💪 Motivation
+
+Chaque jour compte. Ce planning est exigeant mais vous garantit une progression constante. Tenez-vous à ce rythme, et le jour du Bac, vous serez prêt(e) !
+
+**Bon courage, vous allez réussir !** 🎓`,
+    tags: ["révision", "bac2026", "planning", "intensif"],
   },
   {
     title: "🎯 Les 5 erreurs à éviter en révision",
@@ -235,7 +289,7 @@ async function seed() {
 
   console.log("📋 Liste des produits :");
   products.forEach((p) =>
-    console.log(`  - ${p.icon} ${p.name} (${p.price} €)`)
+    console.log(`  - ${p.icon} ${p.name} (${p.price} €)`),
   );
 
   console.log("📋 Liste des cours :");
@@ -243,7 +297,7 @@ async function seed() {
 
   console.log("📋 Liste des articles du journal :");
   journalPosts.forEach((post) =>
-    console.log(`  - 📖 ${post.title} (${post.slug})`)
+    console.log(`  - 📖 ${post.title} (${post.slug})`),
   );
 
   console.log("✅ Seed terminé avec succès !");
