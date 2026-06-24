@@ -7,7 +7,7 @@ import JourCountdown from "@/app/components/JourCountdown";
 
 export default function Hero() {
   return (
-    <section className="relative py-12 md:py-20 overflow-hidden bg-blue-50">
+    <section className="relative py-12 md:py-20 overflow-hidden bg-rose-300">
       {/* Image de fond */}
       <div className="absolute inset-0 z-0">
         <Image
