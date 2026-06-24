@@ -40,7 +40,7 @@ export default async function Home() {
                 </p>
                 <Link
                   href="/cours"
-                  className="mt-3 inline-block bg-primary-600 hover:bg-primary-700 text-white px-4 py-1 rounded-lg font-semibold text-sm transition"
+                  className="mt-3 inline-block bg-primary-200 hover:bg-yellow-300 text-white px-4 py-1 rounded-lg font-semibold text-sm transition"
                 >
                   Accéder →
                 </Link>

@@ -65,7 +65,7 @@ export default function Hero() {
           </Link>
           <Link
             href="/pdf-gratuits"
-            className="bg-transparent border-2 border-blue-100 text-blue-700 hover:bg-blue-700 hover:text-white px-6 py-3 rounded-lg font-bold transition text-sm"
+            className="bg-transparent border-2 border-blue-100 text-green-700 hover:bg-red-200 hover:text-white px-6 py-3 rounded-lg font-bold transition text-sm"
           >
             📄 Annales 2025
           </Link>
@@ -75,7 +75,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-12 flex flex-wrap gap-6 justify-start text-sm text-blue-800 font-medium"
+          className="mt-12 flex flex-wrap gap-6 justify-start text-sm text-yellow-300 font-medium"
         >
           <span>✅ Séries L & S</span>
           <span>✅ Toutes matières</span>

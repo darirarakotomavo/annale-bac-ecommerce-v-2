@@ -137,38 +137,15 @@ const journalPostsData = [
 
 ## Objectif : 27 jours pour tout maîtriser
 
-Ce planning est conçu pour les élèves qui veulent une préparation **intensive et structurée** jusqu'au jour J (20 juillet 2026). Chaque journée est décomposée en sessions de travail, avec des objectifs clairs.
+Ce planning est conçu pour les élèves qui veulent une préparation intensive et structurée jusqu'au jour J (20 juillet 2026). Chaque journée est décomposée en sessions de travail, avec des objectifs clairs.
 
 ---
 
 ## 📅 Structure générale (27 jours)
 
-<table style="width:100%; border-collapse: collapse; background: #f8fafc; border-radius: 8px; overflow: hidden; margin: 16px 0;">
-  <thead>
-    <tr style="background: #1e3a5f; color: white;">
-      <th style="padding: 10px 16px; text-align: left; border: 1px solid #e2e8f0;">Période</th>
-      <th style="padding: 10px 16px; text-align: left; border: 1px solid #e2e8f0;">Jours</th>
-      <th style="padding: 10px 16px; text-align: left; border: 1px solid #e2e8f0;">Objectif</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="background: white;">
-      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;"><strong>Phase 1 : Diagnostic et bases</strong></td>
-      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;">J1 – J5</td>
-      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;">Identifier les lacunes, réviser les fondamentaux</td>
-    </tr>
-    <tr style="background: #f8fafc;">
-      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;"><strong>Phase 2 : Approfondissement</strong></td>
-      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;">J6 – J15</td>
-      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;">Traiter les exercices types et les sujets d'annales</td>
-    </tr>
-    <tr style="background: white;">
-      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;"><strong>Phase 3 : Intensif final</strong></td>
-      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;">J16 – J27</td>
-      <td style="padding: 10px 16px; border: 1px solid #e2e8f0;">Enchaîner les sujets complets, simuler l'examen, gérer le stress</td>
-    </tr>
-  </tbody>
-</table>
+- **Phase 1 : Diagnostic et bases (J1 – J5)** – Identifier les lacunes, réviser les fondamentaux.
+- **Phase 2 : Approfondissement (J6 – J15)** – Traiter les exercices types et les sujets d'annales.
+- **Phase 3 : Intensif final (J16 – J27)** – Enchaîner les sujets complets, simuler l'examen, gérer le stress.
 
 ---
 
@@ -176,26 +153,26 @@ Ce planning est conçu pour les élèves qui veulent une préparation **intensiv
 
 ### 🔍 Phase 1 – Diagnostic et bases (J1 à J5)
 
-- **J1** : Faire un test complet en **Mathématiques** (sujet type Bac) – noter les difficultés.
-- **J2** : Faire un test complet en **Sciences Physiques** – identifier les chapitres à revoir.
-- **J3** : Revoir les **formules clés** en Maths et Physique (créer une fiche mémo).
-- **J4** : Réviser les **chapitres les plus faibles** identifiés (vidéos YouTube + fiches).
-- **J5** : Faire un **deuxième test** (plus court) pour valider les progrès – ajuster le planning.
+- **J1** : Faire un test complet en Mathématiques (sujet type Bac) – noter les difficultés.
+- **J2** : Faire un test complet en Sciences Physiques – identifier les chapitres à revoir.
+- **J3** : Revoir les formules clés en Maths et Physique (créer une fiche mémo).
+- **J4** : Réviser les chapitres les plus faibles identifiés (vidéos YouTube + fiches).
+- **J5** : Faire un deuxième test (plus court) pour valider les progrès – ajuster le planning.
 
 ---
 
 ### 📚 Phase 2 – Approfondissement (J6 à J15)
 
-- **J6** : Exercices sur les **suites et fonctions** (Maths).
-- **J7** : Exercices sur la **mécanique** (Physique).
-- **J8** : Exercices sur la **géométrie** (Maths).
-- **J9** : Exercices sur l'**électricité** (Physique).
-- **J10** : Exercices sur **probabilités et statistiques** (Maths).
-- **J11** : Exercices sur **l'optique et les ondes** (Physique).
-- **J12** : **Annales 2024 – Maths** (sujet complet, temps limité).
-- **J13** : **Annales 2024 – Physique** (sujet complet, temps limité).
+- **J6** : Exercices sur les suites et fonctions (Maths).
+- **J7** : Exercices sur la mécanique (Physique).
+- **J8** : Exercices sur la géométrie (Maths).
+- **J9** : Exercices sur l'électricité (Physique).
+- **J10** : Exercices sur probabilités et statistiques (Maths).
+- **J11** : Exercices sur l'optique et les ondes (Physique).
+- **J12** : Annales 2024 – Maths (sujet complet, temps limité).
+- **J13** : Annales 2024 – Physique (sujet complet, temps limité).
 - **J14** : Correction détaillée des annales – identifier les erreurs récurrentes.
-- **J15** : Révision des **points bloquants** + fiche de synthèse.
+- **J15** : Révision des points bloquants + fiche de synthèse.
 
 ---
 
@@ -204,23 +181,23 @@ Ce planning est conçu pour les élèves qui veulent une préparation **intensiv
 - **J16** : Annales 2023 – Maths (sujet complet).
 - **J17** : Annales 2023 – Physique (sujet complet).
 - **J18** : Correction et analyse des copies.
-- **J19** : **Simulation** – Maths (9h-12h) puis correction.
-- **J20** : **Simulation** – Physique (14h-17h) puis correction.
-- **J21** : Révision des **méthodologies** (rédaction, gestion du temps).
+- **J19** : Simulation – Maths (9h-12h) puis correction.
+- **J20** : Simulation – Physique (14h-17h) puis correction.
+- **J21** : Révision des méthodologies (rédaction, gestion du temps).
 - **J22** : Annales 2022 – Maths.
 - **J23** : Annales 2022 – Physique.
 - **J24** : Correction + reprise des erreurs.
-- **J25** : **Simulation complète** – Maths + Physique en conditions réelles.
+- **J25** : Simulation complète – Maths + Physique en conditions réelles.
 - **J26** : Correction de la simulation – dernier point de méthode.
-- **J27** : **Relaxation** (lecture des fiches, exercices légers) – préparation mentale.
+- **J27** : Relaxation (lecture des fiches, exercices légers) – préparation mentale.
 
 ---
 
 ## 📌 Conseils pour chaque journée
 
-- **Matin (2h)** : Révision active (exercices, sujets).
-- **Après-midi (2h)** : Correction et analyse des erreurs.
-- **Soir (1h)** : Fiche de synthèse ou lecture rapide.
+- Matin (2h) : Révision active (exercices, sujets).
+- Après-midi (2h) : Correction et analyse des erreurs.
+- Soir (1h) : Fiche de synthèse ou lecture rapide.
 
 **Ne négligez pas :**
 - Le sommeil (7h par nuit minimum)
