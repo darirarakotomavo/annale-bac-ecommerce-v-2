@@ -12,7 +12,7 @@ export default function Footer() {
   const year: number = new Date().getFullYear();
 
   return (
-    <footer className="bg-blue-50 text-gray-700 pt-8 pb-4 border-t border-blue-200">
+    <footer className="bg-Lime-800 text-gray-700 pt-8 pb-4 border-t border-blue-200">
       <div className="container-custom">
         {/* Grille principale : 1 col mobile, 2 tablette, 4 desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-6 border-b border-blue-200">
@@ -33,12 +33,12 @@ export default function Footer() {
 
           {/* Colonne 2 : Liens utiles */}
           <div>
-            <h4 className="text-blue-800 font-semibold mb-2">Liens utiles</h4>
+            <h4 className="text-yellow-400 font-semibold mb-2">Liens utiles</h4>
             <ul className="space-y-1 text-sm">
               <li>
                 <Link
                   href="#products"
-                  className="text-gray-700 hover:text-blue-700 transition"
+                  className="text-yellow-400 hover:text-blue-700 transition"
                 >
                   📚 Produits
                 </Link>
@@ -46,7 +46,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#order"
-                  className="text-gray-700 hover:text-blue-700 transition"
+                  className="text-yellow-400 hover:text-blue-700 transition"
                 >
                   📥 Commander
                 </Link>
@@ -54,7 +54,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/cours"
-                  className="text-gray-700 hover:text-blue-700 transition"
+                  className="text-yellow-400 hover:text-blue-700 transition"
                 >
                   🎓 Révision Bac 2026
                 </Link>
@@ -62,7 +62,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/journal"
-                  className="text-gray-700 hover:text-blue-700 transition"
+                  className="text-yellow-400 hover:text-blue-700 transition"
                 >
                   📖 Journal
                 </Link>
@@ -70,7 +70,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/pdf-gratuits"
-                  className="text-gray-700 hover:text-blue-700 transition"
+                  className="text-yellow-400 hover:text-blue-700 transition"
                 >
                   📄 PDF Gratuits
                 </Link>
@@ -86,7 +86,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-gray-700 hover:text-blue-700 transition"
+                  className="text-yellow-400 hover:text-blue-700 transition"
                 >
                   📞 Contact
                 </Link>
@@ -103,7 +103,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="text-gray-600 hover:text-[#1877f2] transition-colors duration-200"
+                className="text-yellow-400 hover:text-[#1877f2] transition-colors duration-200"
               >
                 <FaFacebook />
               </a>
@@ -121,7 +121,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="text-gray-600 hover:text-[#e4405f] transition-colors duration-200"
+                className="text-yellow-400 hover:text-[#e4405f] transition-colors duration-200"
               >
                 <FaInstagram />
               </a>
@@ -130,7 +130,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
-                className="text-gray-600 hover:text-[#ff0000] transition-colors duration-200"
+                className="text-yellow-400 hover:text-[#df1414] transition-colors duration-200"
               >
                 <FaYoutube />
               </a>
@@ -160,11 +160,11 @@ export default function Footer() {
           {/* Colonne 4 : Contact */}
           <div>
             <h4 className="text-blue-800 font-semibold mb-2">Contact</h4>
-            <p className="text-sm text-gray-600">📞 +261 32 24 622 74</p>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-yellow-400">📞 +261 32 24 622 74</p>
+            <p className="text-sm text-yellow-400">
               📧 darirarakotomavo@gmail.com
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-yellow-400">
               💬 WhatsApp : +261 32 24 622 74
             </p>
           </div>

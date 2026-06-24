@@ -20,7 +20,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-green-50 text-gray-800 shadow-md border-b border-green-200">
+    <header className="sticky top-0 z-50 bg-Lime-400 text-gray-800 shadow-md border-b border-Rose-600">
       <div className="container-custom py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
