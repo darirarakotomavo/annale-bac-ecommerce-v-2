@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ShoppingCart } from "lucide-react";
 import { useCart } from "@/app/context/CartContext";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,22 +13,30 @@ export default function Header() {
   const { getTotalItems } = useCart();
   const totalItems = getTotalItems();
 
+  // Marquer le composant comme monté uniquement côté client
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-Amber-400 text-gray-800 shadow-md border-b border-green-200">
+    <header className="sticky top-0 z-50 bg-green-50 text-gray-800 shadow-md border-b border-green-200">
       <div className="container-custom py-2">
         <div className="flex items-center justify-between">
-          {/* Logo – TITRE EN NOIR */}
+          {/* Logo */}
           <Link
             href="/"
             className="flex items-center gap-2 hover:opacity-80 transition"
           >
+            <Image
+              src="/images/logo-annales.svg"
+              alt="Annales Bac S 2025"
+              width={40}
+              height={40}
+              className="h-10 w-auto"
+            />
             <h1 className="text-xl md:text-2xl font-bold text-black">
-              📚 Annales Bac S 2025
+              Annales Bac S 2025
             </h1>
           </Link>
 
@@ -75,33 +85,33 @@ export default function Header() {
               📞 Contact
             </Link>
 
-            {/* Réseaux sociaux */}
+            {/* Réseaux sociaux avec icônes react-icons */}
             <a
               href="https://www.facebook.com/votre-profil"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-800 hover:text-green-200 transition"
               aria-label="Facebook"
+              className="text-gray-800 hover:text-[#1877f2] transition-colors duration-200 text-xl"
             >
-              📘
+              <FaFacebook />
             </a>
             <a
               href="https://www.instagram.com/votre-profil"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-800 hover:text-green-200 transition"
               aria-label="Instagram"
+              className="text-gray-800 hover:text-[#e4405f] transition-colors duration-200 text-xl"
             >
-              📸
+              <FaInstagram />
             </a>
             <a
               href="https://www.youtube.com/votre-chaine"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-800 hover:text-green-200 transition"
               aria-label="YouTube"
+              className="text-gray-800 hover:text-[#ff0000] transition-colors duration-200 text-xl"
             >
-              ▶️
+              <FaYoutube />
             </a>
 
             {/* Panier */}
@@ -197,25 +207,28 @@ export default function Header() {
                 href="https://www.facebook.com/votre-profil"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-800 hover:text-green-200 transition"
+                aria-label="Facebook"
+                className="text-gray-800 hover:text-[#1877f2] transition-colors duration-200 text-xl"
               >
-                📘
+                <FaFacebook />
               </a>
               <a
                 href="https://www.instagram.com/votre-profil"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-800 hover:text-green-200 transition"
+                aria-label="Instagram"
+                className="text-gray-800 hover:text-[#e4405f] transition-colors duration-200 text-xl"
               >
-                📸
+                <FaInstagram />
               </a>
               <a
                 href="https://www.youtube.com/votre-chaine"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-800 hover:text-green-200 transition"
+                aria-label="YouTube"
+                className="text-gray-800 hover:text-[#ff0000] transition-colors duration-200 text-xl"
               >
-                ▶️
+                <FaYoutube />
               </a>
             </div>
           </nav>

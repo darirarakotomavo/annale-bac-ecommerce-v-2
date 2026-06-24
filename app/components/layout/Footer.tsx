@@ -1,12 +1,22 @@
 import Link from "next/link";
+import {
+  FaFacebook,
+  FaXTwitter, // Nouveau logo X (ex-Twitter)
+  FaInstagram,
+  FaYoutube,
+  FaTiktok,
+  FaWhatsapp,
+} from "react-icons/fa6";
 
 export default function Footer() {
-  const year = new Date().getFullYear();
+  const year: number = new Date().getFullYear();
 
   return (
     <footer className="bg-blue-50 text-gray-700 pt-8 pb-4 border-t border-blue-200">
       <div className="container-custom">
+        {/* Grille principale : 1 col mobile, 2 tablette, 4 desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-6 border-b border-blue-200">
+          {/* Colonne 1 : À propos / Marque */}
           <div>
             <h3 className="text-blue-900 font-bold text-base mb-2">
               📚 Annales Bac S 2025
@@ -20,6 +30,8 @@ export default function Footer() {
             </p>
             <p className="text-sm text-gray-600">Tous droits réservés</p>
           </div>
+
+          {/* Colonne 2 : Liens utiles */}
           <div>
             <h4 className="text-blue-800 font-semibold mb-2">Liens utiles</h4>
             <ul className="space-y-1 text-sm">
@@ -81,51 +93,71 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* Colonne 3 : Suivez-moi (Style Flaticon avec icônes) */}
           <div>
             <h4 className="text-blue-800 font-semibold mb-2">Suivez-moi</h4>
-            <ul className="space-y-1 text-sm">
-              <li>
-                <a
-                  href="https://www.facebook.com/votre-profil"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-700 hover:text-blue-700 transition"
-                >
-                  📘 Facebook
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/votre-profil"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-700 hover:text-blue-700 transition"
-                >
-                  📸 Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/votre-chaine"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-700 hover:text-blue-700 transition"
-                >
-                  ▶️ YouTube
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.tiktok.com/@votre-compte"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-700 hover:text-blue-700 transition"
-                >
-                  🎵 TikTok
-                </a>
-              </li>
-            </ul>
+            <div className="flex flex-wrap gap-4 text-2xl">
+              <a
+                href="https://www.facebook.com/votre-profil"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-gray-600 hover:text-[#1877f2] transition-colors duration-200"
+              >
+                <FaFacebook />
+              </a>
+              <a
+                href="https://x.com/votre-profil"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
+                className="text-gray-600 hover:text-black transition-colors duration-200"
+              >
+                <FaXTwitter />
+              </a>
+              <a
+                href="https://www.instagram.com/votre-profil"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-gray-600 hover:text-[#e4405f] transition-colors duration-200"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://www.youtube.com/votre-chaine"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="text-gray-600 hover:text-[#ff0000] transition-colors duration-200"
+              >
+                <FaYoutube />
+              </a>
+              <a
+                href="https://www.tiktok.com/@votre-compte"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                className="text-gray-600 hover:text-black transition-colors duration-200"
+              >
+                <FaTiktok />
+              </a>
+              <a
+                href="https://wa.me/261322462274"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="text-gray-600 hover:text-[#25d366] transition-colors duration-200"
+              >
+                <FaWhatsapp />
+              </a>
+            </div>
+            {/* Petit rappel du numéro sous les icônes (optionnel) */}
+            <p className="text-xs text-gray-500 mt-2">📞 +261 32 24 622 74</p>
           </div>
+
+          {/* Colonne 4 : Contact */}
           <div>
             <h4 className="text-blue-800 font-semibold mb-2">Contact</h4>
             <p className="text-sm text-gray-600">📞 +261 32 24 622 74</p>
@@ -137,6 +169,8 @@ export default function Footer() {
             </p>
           </div>
         </div>
+
+        {/* Bas de page : mention de mise à jour */}
         <div className="pt-4 text-center text-sm text-gray-500">
           <p>
             Dernière mise à jour :{" "}

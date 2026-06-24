@@ -1,13 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import JourCountdown from "@/app/components/JourCountdown";
 
 export default function Hero() {
   return (
     <section className="relative py-12 md:py-20 overflow-hidden bg-blue-50">
-      <div className="absolute inset-0 opacity-5 bg-[url('/images/pattern.png')] bg-repeat" />
+      {/* Image de fond */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero-bg.jpg"
+          alt="Réussir votre Bac"
+          fill
+          className="object-cover opacity-20"
+          priority
+        />
+      </div>
+      <div className="absolute inset-0 opacity-5 bg-[url('/images/pattern.png')] bg-repeat z-0" />
       <div className="container-custom relative z-10">
         <motion.span
           initial={{ opacity: 0, y: -20 }}
@@ -58,14 +69,13 @@ export default function Hero() {
         >
           <Link
             href="/cours"
-            className="bg-yellow-2
-            00 hover:bg-yellow-200 text-white px-6 py-3 rounded-lg font-bold transition shadow-lg hover:shadow-xl text-sm"
+            className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-bold transition shadow-lg hover:shadow-xl text-sm"
           >
             🎓 Cours de révision
           </Link>
           <Link
             href="/pdf-gratuits"
-            className="bg-transparent border-2 border-blue-100 text-green-700 hover:bg-red-200 hover:text-white px-6 py-3 rounded-lg font-bold transition text-sm"
+            className="bg-transparent border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white px-6 py-3 rounded-lg font-bold transition text-sm"
           >
             📄 Annales 2025
           </Link>
@@ -75,7 +85,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-12 flex flex-wrap gap-6 justify-start text-sm text-yellow-300 font-medium"
+          className="mt-12 flex flex-wrap gap-6 justify-start text-sm text-blue-800 font-medium"
         >
           <span>✅ Séries L & S</span>
           <span>✅ Toutes matières</span>
