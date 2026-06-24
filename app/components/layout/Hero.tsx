@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Image de fond */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-bg.jpg"
+          src="/images/hero-bg-2.jpg"
           alt="Réussir votre Bac"
           fill
           className="object-cover opacity-20"
