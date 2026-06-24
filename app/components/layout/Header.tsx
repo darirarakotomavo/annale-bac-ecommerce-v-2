@@ -12,9 +12,11 @@ export default function Header() {
   const [mounted, setMounted] = useState(false);
   const { getTotalItems } = useCart();
   const totalItems = getTotalItems();
-  // eslint-disable-next-line react-hooks/set-state-in-effect
+
   // Marquer le composant comme monté uniquement côté client
+  // pour éviter les incohérences d'hydratation avec le compteur du panier.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
