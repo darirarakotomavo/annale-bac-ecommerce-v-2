@@ -1,4 +1,3 @@
-// app/about/page.tsx
 import Header from "@/app/components/layout/Header";
 import Footer from "@/app/components/layout/Footer";
 import { Card, CardBody } from "@/app/components/ui/Card";
