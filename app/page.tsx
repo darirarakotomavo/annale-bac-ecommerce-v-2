@@ -51,7 +51,7 @@ export default async function Home() {
                   Annales Bac 2025
                 </h2>
                 <p className="text-gray-600 mt-1 text-sm">
-                  Toutes matières - Séries S et L
+                  Toutes matières - Séries (S, L , A , C ,D )
                 </p>
                 <p className="text-xs text-gray-500">Sujets + Corrigés</p>
                 <Link

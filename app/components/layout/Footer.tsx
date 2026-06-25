@@ -12,7 +12,7 @@ export default function Footer() {
   const year: number = new Date().getFullYear();
 
   return (
-    <footer className="bg-Lime-800 text-gray-700 pt-8 pb-4 border-t border-blue-200">
+    <footer className="bg-green-300 text-gray-700 pt-8 pb-4 border-t border-blue-200">
       <div className="container-custom">
         {/* Grille principale : 1 col mobile, 2 tablette, 4 desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-6 border-b border-blue-200">

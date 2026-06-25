@@ -35,7 +35,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-blue-900 mb-4 text-left"
         >
-          Réussissez votre Bac
+          Cours accélérés en Ligne - Préparation BAC 2026 – Série ( L , S , A ,
+          C , D ) -
         </motion.h1>
 
         <motion.h2
@@ -44,7 +45,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-2xl md:text-3xl text-blue-700 mb-6 font-light text-left"
         >
-          Cours de révision accélérée & Annales 2025
+          Sujets pdf et corrigés pdf - Bac 2025 - Toutes Matières et Toutes
+          Séries - Gratuits -
         </motion.h2>
 
         <motion.p
@@ -53,12 +55,17 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg md:text-xl text-blue-900 max-w-2xl mx-0 mb-8 font-medium text-left leading-relaxed"
         >
-          Préparez-vous intensivement pour le{" "}
+          Cours de révisions intensives pour le{" "}
           <span className="text-orange-600 font-bold">Bac 2026</span> avec des
-          cours adaptés (
-          <span className="text-orange-600 font-bold">Séries L et S</span>) et
-          les <span className="text-orange-600 font-bold">annales 2025</span>{" "}
-          toutes matières.
+          documents
+          <span className="text-orange-600 font-bold">
+            - Résumés des Cours - Fiches des Formules
+          </span>
+          et les{" "}
+          <span className="text-orange-600 font-bold">
+            Sujets avec corrections détaillées Bac 2025
+          </span>{" "}
+          toutes Matières et toutes Séries (S , L, A , C, D)
         </motion.p>
 
         <motion.div
@@ -69,13 +76,13 @@ export default function Hero() {
         >
           <Link
             href="/cours"
-            className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-bold transition shadow-lg hover:shadow-xl text-sm"
+            className="bg-blue-300 hover:bg-yellow-300 text-white px-6 py-3 rounded-lg font-bold transition shadow-lg hover:shadow-xl text-sm"
           >
             🎓 Cours de révision
           </Link>
           <Link
             href="/pdf-gratuits"
-            className="bg-transparent border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white px-6 py-3 rounded-lg font-bold transition text-sm"
+            className="bg-transparent border-2 border-blue-700 text-blue-700 hover:bg-green-300 hover:text-white px-6 py-3 rounded-lg font-bold transition text-sm"
           >
             📄 Annales 2025
           </Link>
@@ -87,7 +94,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-12 flex flex-wrap gap-6 justify-start text-sm text-blue-800 font-medium"
         >
-          <span>✅ Séries L & S</span>
+          <span>✅ Séries ( S , L , A , C , D )</span>
           <span>✅ Toutes matières</span>
           <span>✅ Corrigés détaillés</span>
         </motion.div>
