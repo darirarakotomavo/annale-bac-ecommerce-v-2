@@ -74,7 +74,7 @@ const CourseSchema = new Schema<ICourse>(
     rating: { type: Number, default: 0 },
     isPublished: { type: Boolean, default: false },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 export const Course =

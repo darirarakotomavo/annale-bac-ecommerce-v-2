@@ -11,7 +11,7 @@ const pdfList = [
     title: "📐 Sujet Mathématiques - Bac S 2025",
     description:
       "Sujet officiel de l'épreuve de Mathématiques (3 exercices + 2 problèmes).",
-    fileName: "sujet-maths-2025.pdf",
+    fileName: "sujet-maths-S-2025.pdf",
     fileSize: "~ 1.2 Mo",
     icon: <BookOpen className="w-5 h-5" />,
   },
@@ -19,7 +19,7 @@ const pdfList = [
     id: "maths-corrige",
     title: "📐 Corrigé Mathématiques - Bac S 2025",
     description: "Corrigé complet de l'épreuve de Mathématiques (10 pages).",
-    fileName: "corrige-maths-2025.pdf",
+    fileName: "corrige-maths-S-2025.pdf",
     fileSize: "~ 2.5 Mo",
     icon: <CheckCircle className="w-5 h-5" />,
   },
@@ -29,7 +29,7 @@ const pdfList = [
     title: "⚡ Sujet Sciences Physiques - Bac S 2025",
     description:
       "Sujet officiel de l'épreuve de Sciences Physiques (5 exercices).",
-    fileName: "sujet-physique-2025.pdf",
+    fileName: "sujet-physique-S-2025.pdf",
     fileSize: "~ 1.5 Mo",
     icon: <BookOpen className="w-5 h-5" />,
   },
@@ -38,7 +38,7 @@ const pdfList = [
     title: "⚡ Corrigé Sciences Physiques - Bac S 2025",
     description:
       "Corrigé complet de l'épreuve de Sciences Physiques (9 pages).",
-    fileName: "corrige-physique-2025.pdf",
+    fileName: "corrige-physique-S-2025.pdf",
     fileSize: "~ 3.1 Mo",
     icon: <CheckCircle className="w-5 h-5" />,
   },
