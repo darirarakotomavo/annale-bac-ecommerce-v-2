@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Image de fond */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-bg-2.jpg"
+          src="/images/hero-bg-2.jpeg"
           alt="Réussir votre Bac"
           fill
           className="object-cover opacity-20"
@@ -35,8 +35,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-blue-900 mb-4 text-left"
         >
-          Cours accélérés en Ligne - Préparation BAC 2026 – Série ( L , S , A ,
-          C , D ) -
+          Séances de révision en Ligne BAC 2026 Série ( L , S , A , C, D )
         </motion.h1>
 
         <motion.h2
@@ -45,8 +44,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-2xl md:text-3xl text-blue-700 mb-6 font-light text-left"
         >
-          Sujets pdf et corrigés pdf - Bac 2025 - Toutes Matières et Toutes
-          Séries - Gratuits -
+          Sujets et corrigés Bac 2025 Toutes Matières Série ( L , S , A , C, D )
+          pdf Gratuits
         </motion.h2>
 
         <motion.p
@@ -55,15 +54,16 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg md:text-xl text-blue-900 max-w-2xl mx-0 mb-8 font-medium text-left leading-relaxed"
         >
-          Cours de révisions intensives pour le{" "}
+          Simulations Bac chronométrée pour le{" "}
           <span className="text-orange-600 font-bold">Bac 2026</span> avec des
           documents
           <span className="text-orange-600 font-bold">
-            - Résumés des Cours - Fiches des Formules
+            Plans et Méthodologies pour Dissertations philosophiques ; Fiches
+            des Formules ;
           </span>
           et les{" "}
           <span className="text-orange-600 font-bold">
-            Sujets avec corrections détaillées Bac 2025
+            Sujets types Bac avec corrections détaillées
           </span>{" "}
           toutes Matières et toutes Séries (S , L, A , C, D)
         </motion.p>
@@ -94,7 +94,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-12 flex flex-wrap gap-6 justify-start text-sm text-blue-800 font-medium"
         >
-          <span>✅ Séries ( S , L , A , C , D )</span>
+          <span>✅ Séries ( L , S , A , C , D )</span>
           <span>✅ Toutes matières</span>
           <span>✅ Corrigés détaillés</span>
         </motion.div>
