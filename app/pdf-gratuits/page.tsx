@@ -42,6 +42,24 @@ const pdfList = [
     fileSize: "~ 3.1 Mo",
     icon: <CheckCircle className="w-5 h-5" />,
   },
+  // === PHILOSOPHIE ===
+  {
+    id: "philo-corrige",
+    title: "📖 Corrigé Philosophie - Bac L 2025",
+    description:
+      "Corrigé complet de l'épreuve de Philosophie (dissertation et explication de texte).",
+    fileName: "corrige-philo-L-2025.pdf",
+    fileSize: "~ 1 Mo",
+    icon: <CheckCircle className="w-5 h-5" />,
+  },
+  {
+    id: "philo-plan",
+    title: "📖 plan-méthodologie-Philosophie",
+    description: "méthodologie et plan de dissertation philosophique .",
+    fileName: "plan-dissertation-philosophique.pdf",
+    fileSize: "~ 1.7 Mo",
+    icon: <CheckCircle className="w-5 h-5" />,
+  },
 ];
 
 export default function PdfGratuitsPage() {
