@@ -7,7 +7,7 @@ import JourCountdown from "@/app/components/JourCountdown";
 
 export default function Hero() {
   return (
-    <section className="relative py-12 md:py-20 overflow-hidden bg-white">
+    <section className="relative py-12 md:py-20 overflow-hidden ">
       {/* Image de fond
       <div className="absolute inset-0 z-0">
         <Image
@@ -57,7 +57,7 @@ export default function Hero() {
           Simulations Bac chronométrées pour le{" "}
           <span className="text-orange-600 font-bold">Bac 2026</span>
           <span className="text-orange-600 font-bold">
-            Plans et Méthodologies pour Dissertations philosophiques ; Fiches
+            -- Plans et Méthodologies pour Dissertations philosophiques ; Fiches
             des Formules ;
           </span>
           et les{" "}
