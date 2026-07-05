@@ -13,7 +13,9 @@ export default function Header() {
   const { getTotalItems } = useCart();
   const totalItems = getTotalItems();
 
+  // ✅ Nécessaire pour l'hydratation Next.js – on désactive la règle sur cette ligne
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 

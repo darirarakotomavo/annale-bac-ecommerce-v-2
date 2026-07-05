@@ -1,65 +1,162 @@
-/* app/globals.css */
+/* app/globals.css - Version Tailwind CSS v4 */
+
+/* ✅ 1. Import du framework */
 @import "tailwindcss";
 
-/* ✅ Variante personnalisée pour le mode sombre */
+/* ✅ 2. Variante personnalisée pour le mode sombre (reconnue nativement en v4) */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ✅ Styles de base */
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply bg-gray-50 text-gray-900 transition-colors duration-300;
-    font-family: "Inter", system-ui, sans-serif;
-  }
+/* ✅ 3. Déclaration des variables globales avec @theme (nouveauté v4) */
+@theme {
+  --color-background: #f9fafb;
+  --color-foreground: #111827;
 }
 
-/* ✅ Mode sombre */
-.dark body {
-  @apply bg-gray-900 text-gray-100;
+/* ✅ 4. Application des variables pour le mode sombre */
+.dark {
+  --color-background: #111827;
+  --color-foreground: #f9fafb;
 }
 
-/* ✅ Classes utilitaires pour les composants */
+/* ✅ 5. Styles globaux de base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: "Inter", system-ui, sans-serif;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+/* ✅ 6. Vos classes utilitaires personnalisées (exactement les mêmes qu'avant) */
 @layer components {
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .card {
-    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md dark:shadow-gray-900/50 transition-all duration-300;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+  }
+
+  .dark .card {
+    background-color: #1f2937;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
   }
 
   .card-hover {
-    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+  }
+
+  .card-hover:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .dark .card-hover {
+    background-color: #1f2937;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  }
+
+  .dark .card-hover:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
   }
 
   .btn-primary {
-    @apply bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+  }
+
+  .btn-primary:hover {
+    background-color: #1d4ed8;
+  }
+
+  .dark .btn-primary {
+    background-color: #3b82f6;
+  }
+
+  .dark .btn-primary:hover {
+    background-color: #2563eb;
   }
 
   .btn-secondary {
-    @apply border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-gray-900 font-semibold py-2 px-4 rounded-lg transition;
+    border: 2px solid #2563eb;
+    color: #2563eb;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background-color: #2563eb;
+    color: white;
+  }
+
+  .dark .btn-secondary {
+    border-color: #3b82f6;
+    color: #3b82f6;
+  }
+
+  .dark .btn-secondary:hover {
+    background-color: #3b82f6;
+    color: #1f2937;
   }
 
   .text-primary {
-    @apply text-gray-900 dark:text-gray-100;
+    color: #111827;
+  }
+
+  .dark .text-primary {
+    color: #f9fafb;
   }
 
   .text-secondary {
-    @apply text-gray-600 dark:text-gray-400;
+    color: #4b5563;
+  }
+
+  .dark .text-secondary {
+    color: #9ca3af;
   }
 
   .bg-primary {
-    @apply bg-white dark:bg-gray-900;
+    background-color: #ffffff;
+  }
+
+  .dark .bg-primary {
+    background-color: #111827;
   }
 
   .bg-secondary {
-    @apply bg-gray-50 dark:bg-gray-800;
+    background-color: #f9fafb;
+  }
+
+  .dark .bg-secondary {
+    background-color: #1f2937;
   }
 
   .border-primary {
-    @apply border-gray-200 dark:border-gray-700;
+    border-color: #e5e7eb;
+  }
+
+  .dark .border-primary {
+    border-color: #374151;
   }
 }

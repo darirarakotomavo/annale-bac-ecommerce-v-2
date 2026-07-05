@@ -1,6 +1,8 @@
+// app/models/Course.ts
 import mongoose, { Schema, models } from "mongoose";
 
 export interface ICourse {
+  _id: string; // ✅ obligatoire car Mongoose le génère toujours
   title: string;
   slug: string;
   category: "informatique" | "mathematiques" | "physique-chimie" | "autre";

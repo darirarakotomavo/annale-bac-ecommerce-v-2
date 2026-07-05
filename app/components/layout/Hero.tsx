@@ -7,9 +7,9 @@ import JourCountdown from "@/app/components/JourCountdown";
 
 export default function Hero() {
   return (
-    <section className="relative py-12 md:py-20 overflow-hidden ">
-      {/* Image de fond
-      <div className="absolute inset-0 z-0">
+    <section className="relative py-12 md:py-20 overflow-hidden">
+      {/* Image de fond */}
+      {/* <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-bg-2.jpeg"
           alt="Réussir votre Bac"
@@ -24,7 +24,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-block bg-amber-400 text-black px-4 py-1 rounded-full text-sm font-bold mb-4"
+          className="inline-block bg-sky-400 text-white px-4 py-1 rounded-full text-sm font-bold mb-4"
         >
           📚 Bac 2026 – <JourCountdown />
         </motion.span>
@@ -33,7 +33,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-blue-900 mb-4 text-left"
+          className="text-4xl md:text-3xl lg:text-2xl font-extrabold text-sky-900 mb-4 text-left"
         >
           Séances de révision en Ligne BAC 2026 Série ( L , S , A , C, D )
         </motion.h1>
@@ -42,7 +42,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-2xl md:text-3xl text-blue-700 mb-6 font-light text-left"
+          className="text-2xl md:text-3xl text-sky-700 mb-6 font-light text-left"
         >
           Sujets et corrigés Bac 2025 Toutes Matières Série ( L , S , A , C, D )
           pdf Gratuits
@@ -52,16 +52,16 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-lg md:text-xl text-blue-900 max-w-2xl mx-0 mb-8 font-medium text-left leading-relaxed"
+          className="text-lg md:text-xl text-sky-900 max-w-2xl mx-0 mb-8 font-medium text-left leading-relaxed"
         >
           Simulations Bac chronométrées pour le{" "}
-          <span className="text-orange-600 font-bold">Bac 2026</span>
-          <span className="text-orange-600 font-bold">
+          <span className="text-sky-600 font-bold">Bac 2026</span>
+          <span className="text-sky-600 font-bold">
             -- Plans et Méthodologies pour Dissertations philosophiques ; Fiches
             des Formules ;
           </span>
           et les{" "}
-          <span className="text-orange-600 font-bold">
+          <span className="text-sky-600 font-bold">
             Sujets types Bac avec corrections détaillées
           </span>{" "}
           toutes Matières et toutes Séries (S , L, A , C, D)
@@ -75,13 +75,13 @@ export default function Hero() {
         >
           <Link
             href="/cours"
-            className="bg-blue-300 hover:bg-yellow-300 text-white px-6 py-3 rounded-lg font-bold transition shadow-lg hover:shadow-xl text-sm"
+            className="bg-sky-300 hover:bg-sky-400 text-white px-6 py-3 rounded-lg font-bold transition shadow-lg hover:shadow-xl text-sm"
           >
             🎓 Cours de révision
           </Link>
           <Link
             href="/pdf-gratuits"
-            className="bg-transparent border-2 border-blue-700 text-blue-700 hover:bg-green-300 hover:text-white px-6 py-3 rounded-lg font-bold transition text-sm"
+            className="bg-transparent border-2 border-sky-700 text-sky-700 hover:bg-sky-400 hover:text-white px-6 py-3 rounded-lg font-bold transition text-sm"
           >
             📄 Annales 2025
           </Link>
@@ -91,7 +91,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-12 flex flex-wrap gap-6 justify-start text-sm text-blue-800 font-medium"
+          className="mt-12 flex flex-wrap gap-6 justify-start text-sm text-sky-800 font-medium"
         >
           <span>✅ Séries ( L , S , A , C , D )</span>
           <span>✅ Toutes matières</span>
