@@ -8,7 +8,7 @@ import JourCountdown from "@/app/components/JourCountdown";
 export default function Hero() {
   return (
     <section className="relative py-12 md:py-20 overflow-hidden bg-white">
-      {/* Image de fond */}
+      {/* Image de fond
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-bg-2.jpeg"
@@ -17,7 +17,7 @@ export default function Hero() {
           className="object-cover opacity-80"
           priority
         />
-      </div>
+      </div> */}
       <div className="absolute inset-0 opacity-5 bg-[url('/images/pattern.png')] bg-repeat z-0" />
       <div className="container-custom relative z-10">
         <motion.span
