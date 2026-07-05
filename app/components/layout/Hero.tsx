@@ -54,9 +54,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg md:text-xl text-blue-900 max-w-2xl mx-0 mb-8 font-medium text-left leading-relaxed"
         >
-          Simulations Bac chronométrée pour le{" "}
-          <span className="text-orange-600 font-bold">Bac 2026</span> avec des
-          documents
+          Simulations Bac chronométrées pour le{" "}
+          <span className="text-orange-600 font-bold">Bac 2026</span>
           <span className="text-orange-600 font-bold">
             Plans et Méthodologies pour Dissertations philosophiques ; Fiches
             des Formules ;
