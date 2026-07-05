@@ -7,14 +7,14 @@ import JourCountdown from "@/app/components/JourCountdown";
 
 export default function Hero() {
   return (
-    <section className="relative py-12 md:py-20 overflow-hidden bg-rose-100">
+    <section className="relative py-12 md:py-20 overflow-hidden bg-white">
       {/* Image de fond */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-bg-2.jpeg"
           alt="Réussir votre Bac"
           fill
-          className="object-cover opacity-20"
+          className="object-cover opacity-80"
           priority
         />
       </div>
