@@ -159,7 +159,7 @@ export default function Header() {
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
               onClick={() => setIsOpen(false)}
             >
-              🎓 Révision Bac 2026
+              🎓 Préparation Bac 2027
             </Link>
             <Link
               href="/journal"

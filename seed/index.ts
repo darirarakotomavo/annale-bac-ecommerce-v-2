@@ -9,7 +9,7 @@ const productsData = [
     name: "Mathématiques",
     subject: "Maths",
     description: "Corrigé complet de l'épreuve de Mathématiques",
-    price: 8,
+    price: 1500,
     pages: 10,
     icon: "📐",
     features: [
@@ -23,7 +23,7 @@ const productsData = [
     name: "Sciences Physiques",
     subject: "Physique",
     description: "Corrigé complet de l'épreuve de Sciences Physiques",
-    price: 8,
+    price: 1500,
     pages: 9,
     icon: "⚡",
     features: ["5 exercices corrigés", "Solutions détaillées", "Format PDF"],
@@ -33,14 +33,14 @@ const productsData = [
     name: "Pack Complet",
     subject: "Maths + Physique",
     description: "Les deux matières pour réussir le Bac",
-    price: 12,
+    price: 2000,
     pages: 19,
     icon: "🎯",
     isPopular: true,
     features: [
       "Mathématiques + Physique",
       "19 pages de corrigés",
-      "Économisez 4 €",
+      "Économisez 1000 Ariary par rapport à l'achat séparé",
     ],
   },
   {
@@ -48,7 +48,7 @@ const productsData = [
     name: "Code Source LaTeX",
     subject: "Enseignant",
     description: "Code source complet des corrigés",
-    price: 25,
+    price: 20000,
     pages: 0,
     icon: "📦",
     isEnseignant: true,
@@ -63,7 +63,7 @@ const productsData = [
     name: "Cours Informatique - Débutant",
     subject: "Vidéo",
     description: "Vidéo complète pour débuter en informatique",
-    price: 5,
+    price: 3000,
     pages: 0,
     icon: "🎬",
     features: [
@@ -94,8 +94,8 @@ const coursesData = [
       "Connaissances de base en HTML/CSS",
       "Notions de JavaScript",
     ],
-    price: 25,
-    discountPrice: 19,
+    price: 2000,
+    discountPrice: 1500,
     duration: 12,
     lessons: [
       { title: "Introduction à Next.js", duration: 15, content: "..." },
@@ -116,7 +116,7 @@ const coursesData = [
       "Réussir les épreuves pratiques",
     ],
     prerequisites: ["Niveau Bac S"],
-    price: 15,
+    price:3000,
     duration: 10,
     lessons: [
       { title: "Mécanique", duration: 30, content: "..." },
@@ -129,27 +129,27 @@ const coursesData = [
 // === DONNÉES DU JOURNAL (UN SEUL BLOC) ===
 const journalPostsData = [
   {
-    title: "📘 Plan de révision accélérée pour le Bac 2026",
-    slug: "plan-revision-acceleree-bac-2026",
+    title: "📘 Planning  pour réussir le  Bac 2027",
+    slug: "cours et exercices corrigés pour-reussir-bac-2027",
     excerpt:
-      "Un planning intensif sur 27 jours pour maximiser vos chances de réussite au Bac 2026.",
-    content: `# Plan de révision accélérée – 27 jours pour le Bac 2026
+      "Un planning intensif mensuel pour maximiser vos chances de réussite au Bac 2027.",
+    content: `# Préparation pour le Bac 2027
 
-## Objectif : 27 jours pour tout maîtriser
+## Objectif :  Maîtriser d'abord les matières principales (Maths et Physique) puis les autres matières.
 
 Ce planning est conçu pour les élèves qui veulent une préparation intensive et structurée jusqu'au jour J (20 juillet 2026). Chaque journée est décomposée en sessions de travail, avec des objectifs clairs.
 
 ---
 
-## 📅 Structure générale (27 jours)
+## 📅 Structure générale
 
-- **Phase 1 : Diagnostic et bases (J1 – J5)** – Identifier les lacunes, réviser les fondamentaux.
+- **Phase 1 : Diagnostic et bases (J1 – J5)** – Identifier les lacunes, apprendre les fondamentaux.
 - **Phase 2 : Approfondissement (J6 – J15)** – Traiter les exercices types et les sujets d'annales.
 - **Phase 3 : Intensif final (J16 – J27)** – Enchaîner les sujets complets, simuler l'examen, gérer le stress.
 
 ---
 
-## 🗓️ Détail des 27 jours
+## 🗓️ Détail de la préparation
 
 ### 🔍 Phase 1 – Diagnostic et bases (J1 à J5)
 
@@ -211,7 +211,7 @@ Ce planning est conçu pour les élèves qui veulent une préparation intensive 
 Chaque jour compte. Ce planning est exigeant mais vous garantit une progression constante. Tenez-vous à ce rythme, et le jour du Bac, vous serez prêt(e) !
 
 **Bon courage, vous allez réussir !** 🎓`,
-    tags: ["révision", "bac2026", "planning", "intensif"],
+    tags: ["préparation", "bac2027", "planning", "intensif"],
   },
   {
     title: "🎯 Les 5 erreurs à éviter en révision",
@@ -237,8 +237,8 @@ Le cerveau a besoin de pauses pour assimiler. Méthode Pomodoro : 25 min de trav
     tags: ["conseils", "révision", "méthodologie"],
   },
   {
-    title: "📚 Les meilleures ressources pour le Bac 2026",
-    slug: "ressources-bac-2026",
+    title: "📚 Les meilleures ressources pour le Bac 2027",
+    slug: "ressources-bac-2027",
     excerpt:
       "Une sélection des meilleures ressources (PDF, vidéos, sites) pour préparer le Bac 2026.",
     content: `# Les meilleures ressources pour le Bac 2026
@@ -255,7 +255,7 @@ Le cerveau a besoin de pauses pour assimiler. Méthode Pomodoro : 25 min de trav
 ## À venir
 - Une série de vidéos exclusives
 - Des sessions de révision en direct sur Facebook`,
-    tags: ["ressources", "bac2026", "recommandations"],
+    tags: ["ressources", "bac2027", "recommandations"],
   },
 ];
 

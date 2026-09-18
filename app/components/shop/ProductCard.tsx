@@ -68,7 +68,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <div className="flex items-end justify-between">
             <div>
               <span className="text-2xl font-bold text-emerald-600">
-                {product.price} €
+                {product.price} Ariary
               </span>
               {product.pages > 0 && (
                 <p className="text-xs text-gray-400">{product.pages} pages</p>
