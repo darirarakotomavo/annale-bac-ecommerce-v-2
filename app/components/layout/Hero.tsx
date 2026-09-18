@@ -35,7 +35,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-4xl md:text-3xl lg:text-2xl font-extrabold text-sky-900 mb-4 text-left"
         >
-          Séances de révision en Ligne BAC 2026 Série ( L , S , A , C, D )
+          Séances de préparation en Ligne BAC 2027 Série ( L , S , OSE )
         </motion.h1>
 
         <motion.h2
@@ -44,7 +44,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-2xl md:text-3xl text-sky-700 mb-6 font-light text-left"
         >
-          Sujets et corrigés Bac 2025 Toutes Matières Série ( L , S , A , C, D )
+          Sujets et corrigés Bac 2026 Toutes Matières Série ( L , S , OSE)
           pdf Gratuits
         </motion.h2>
 
@@ -55,7 +55,7 @@ export default function Hero() {
           className="text-lg md:text-xl text-sky-900 max-w-2xl mx-0 mb-8 font-medium text-left leading-relaxed"
         >
           Simulations Bac chronométrées pour le{" "}
-          <span className="text-sky-600 font-bold">Bac 2026</span>
+          <span className="text-sky-600 font-bold">Bac 2027</span>
           <span className="text-sky-600 font-bold">
             -- Plans et Méthodologies pour Dissertations philosophiques ; Fiches
             des Formules ;
@@ -64,7 +64,7 @@ export default function Hero() {
           <span className="text-sky-600 font-bold">
             Sujets types Bac avec corrections détaillées
           </span>{" "}
-          toutes Matières et toutes Séries (S , L, A , C, D)
+          toutes Matières et toutes Séries (S , L, OSE)
         </motion.p>
 
         <motion.div
@@ -77,13 +77,13 @@ export default function Hero() {
             href="/cours"
             className="bg-sky-300 hover:bg-sky-400 text-white px-6 py-3 rounded-lg font-bold transition shadow-lg hover:shadow-xl text-sm"
           >
-            🎓 Cours de révision
+            🎓 Cours de préparation
           </Link>
           <Link
             href="/pdf-gratuits"
             className="bg-transparent border-2 border-sky-700 text-sky-700 hover:bg-sky-400 hover:text-white px-6 py-3 rounded-lg font-bold transition text-sm"
           >
-            📄 Annales 2025
+            📄 Annales 2026
           </Link>
         </motion.div>
 
@@ -93,7 +93,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-12 flex flex-wrap gap-6 justify-start text-sm text-sky-800 font-medium"
         >
-          <span>✅ Séries ( L , S , A , C , D )</span>
+          <span>✅ Séries ( L , S , OSE)</span>
           <span>✅ Toutes matières</span>
           <span>✅ Corrigés détaillés</span>
         </motion.div>
