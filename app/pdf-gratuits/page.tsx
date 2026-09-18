@@ -82,14 +82,14 @@ export default function PdfGratuitsPage() {
           </h1>
           <p className="text-center text-sky-700 mb-4 max-w-2xl mx-auto">
             Téléchargez gratuitement les sujets et corrigés des épreuves du Bac
-            Madagascar 2025 Séries (L, S, A, C, D).
+            Madagascar 2027 Séries (L, S, OSE).
           </p>
           <div className="flex justify-center gap-6 mb-12">
             <span className="inline-flex items-center gap-2 text-sm text-sky-700">
               <BookOpen className="w-4 h-4" /> Sujet
             </span>
             <span className="inline-flex items-center gap-2 text-sm text-sky-700">
-              <CheckCircle className="w-4 h-4 text-emerald-600" /> Corrigé
+              <CheckCircle className="w-4 h-4 text-emerald-600" /> Corrigés
             </span>
           </div>
 
@@ -125,7 +125,7 @@ export default function PdfGratuitsPage() {
           <div className="mt-12 bg-emerald-50 border border-emerald-200 rounded-xl p-6 text-center">
             <p className="text-sm text-sky-700">
               📚 Ces documents sont offerts gratuitement pour vous aider à
-              préparer le Bac. N&apos;hésitez pas à les partager avec vos
+              préparer le Bac 2027. N&apos;hésitez pas à les partager avec vos
               camarades !
             </p>
           </div>

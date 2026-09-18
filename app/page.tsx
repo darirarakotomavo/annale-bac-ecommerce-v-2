@@ -32,7 +32,7 @@ export default async function Home() {
               <div className="bg-primary-50 rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition">
                 <div className="text-5xl mb-2">🎓</div>
                 <h2 className="text-xl md:text-2xl font-bold text-gray-800">
-                  Cours de révision Bac 2026
+                  Cours de préparation Bac 2027
                 </h2>
                 <p className="text-gray-600 mt-1 text-sm">Série L et S</p>
                 <p className="text-xs text-gray-500">
