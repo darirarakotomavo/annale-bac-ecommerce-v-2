@@ -13,9 +13,13 @@ async function getCourse(slug: string): Promise<CourseType | null> {
     const course = await Course.findOne({ slug, isPublished: true });
     return course ? JSON.parse(JSON.stringify(course)) : null;
 }
-
-export default async function CourseDetailPage({ params }: { params: { slug: string } }) {
-    const course = await getCourse(params.slug);
+export default async function CourseDetailPage({
+    params,
+}: {
+    params: Promise<{ slug: string }>;
+}) {
+    const { slug } = await params;
+    const course = await getCourse(slug);
 
     if (!course) {
         notFound();

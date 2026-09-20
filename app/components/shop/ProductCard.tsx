@@ -8,14 +8,41 @@ import { Badge } from "@/app/components/ui/Badge";
 import {
   IconMaths,
   IconPhysique,
+  IconSVT,
+  IconPhilosophie,
+  IconFrancais,
+  IconHistoireGeo,
+  IconAnglais,
+  IconMalagasy,
+  IconEconomie,
+  IconComptabilite,
+  IconDroit,
+  IconSES,
+  IconEconomieGenerale,
   IconPack,
   IconCode,
   IconVideo,
 } from "@/app/components/ui/Icons";
 
 const iconMap: Record<string, React.FC<{ className?: string }>> = {
+  // Sciences (Série S)
   "📐": IconMaths,
   "⚡": IconPhysique,
+  "🧬": IconSVT,
+  // Lettres (Série L)
+  "📖": IconPhilosophie,
+  "✍️": IconFrancais,
+  "🌍": IconHistoireGeo,
+  // Tronc commun (S, L, OSE)
+  "🗣️": IconAnglais,
+  "🏝️": IconMalagasy,
+  "📈": IconSES,
+  // Éco (Série OSE)
+  "💰": IconEconomie,
+  "📊": IconComptabilite,
+  "⚖️": IconDroit,
+  "🏛️": IconEconomieGenerale,
+  // Packs / autres
   "🎯": IconPack,
   "📦": IconCode,
   "🎬": IconVideo,
@@ -32,30 +59,18 @@ export default function ProductCard({ product }: ProductCardProps) {
   const isPopular = product.isPopular;
   const isEnseignant = product.isEnseignant;
 
-  // WhatsApp (inchangé)
+  // WhatsApp
   const phoneNumber = "261322462274";
   const message = `Bonjour, je souhaite commander : ${product.name} (${product.price} Ar).`;
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   const IconComponent = iconMap[product.icon] || IconMaths;
 
-  // ✅ Ajout au panier + toast
-  // const handleAddToCart = () => {
-  //   addToCart({
-  //     id: (product as any).id ?? (product as any)._id?.toString() ?? product.name,
-  //     name: product.name,
-  //     price: product.price,
-  //     icon: product.icon ?? "📚",
-  //   });
-  //   showToast(`✅ ${product.name} ajouté au panier`, "success", 3000);
-  // };
-
-const handleAddToCart = () => {
+  // Ajout au panier + toast
+  const handleAddToCart = () => {
     addToCart(product);
     showToast(`✅ ${product.name} ajouté au panier`, "success", 3000);
-};
-
-
+  };
 
   return (
     <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
@@ -98,9 +113,7 @@ const handleAddToCart = () => {
             </p>
           </div>
 
-          {/* ✅ Deux boutons séparés, largeur égale */}
           <div className="flex gap-2">
-            {/* 🛒 Ajouter au panier — ROUGE */}
             <button
               onClick={handleAddToCart}
               className="flex-1 bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded-lg font-semibold transition inline-flex items-center justify-center gap-1.5 text-sm"
@@ -110,7 +123,6 @@ const handleAddToCart = () => {
               Ajouter
             </button>
 
-            {/* 💬 WhatsApp — VERT */}
             <a
               href={whatsappUrl}
               target="_blank"
