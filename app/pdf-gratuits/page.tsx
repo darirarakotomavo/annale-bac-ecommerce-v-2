@@ -65,7 +65,7 @@ const pdfList = [
     id: "sujet-français-bac-L-2026",
     title: "📖 Sujet Français - Bac L 2026",
     description: "Sujet officiel de Français – Série L (Bac 2026).",
-    fileName: "sujet-français-L-2026.pdf",
+    fileName: "sujet-francais-L-2026.pdf",
     fileSize: "~ 1.2 Mo",
     icon: <BookOpen className="w-5 h-5" />,
   },
