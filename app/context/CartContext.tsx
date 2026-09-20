@@ -16,10 +16,20 @@ interface CartContextType {
 // ✅ Déclaration du contexte AVANT le provider
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-// Charger le panier depuis localStorage
+// ✅ Versionnage du panier : incrémenter à chaque migration (devise, structure, etc.)
+const CART_VERSION = 'v2-ariary';
+
+// Charger le panier depuis localStorage (avec vérification de version)
 const loadCartFromStorage = (): CartItem[] => {
     if (typeof window === 'undefined') return [];
     try {
+        const version = localStorage.getItem('cart-version');
+        if (version !== CART_VERSION) {
+            // Ancien panier (ex : prix en €) → on le jette
+            localStorage.removeItem('cart');
+            localStorage.setItem('cart-version', CART_VERSION);
+            return [];
+        }
         const saved = localStorage.getItem('cart');
         return saved ? JSON.parse(saved) : [];
     } catch {
@@ -41,9 +51,13 @@ export function CartProvider({ children }: { children: ReactNode }) {
         const prev = cart;
         const existing = prev.find((item) => item.id === product.id);
         if (existing) {
-            updateCart(prev.map((item) =>
-                item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-            ));
+            updateCart(
+                prev.map((item) =>
+                    item.id === product.id
+                        ? { ...item, quantity: item.quantity + 1 }
+                        : item
+                )
+            );
         } else {
             updateCart([...prev, { ...product, quantity: 1 }]);
         }
@@ -58,20 +72,20 @@ export function CartProvider({ children }: { children: ReactNode }) {
             removeFromCart(productId);
             return;
         }
-        updateCart(cart.map((item) =>
-            item.id === productId ? { ...item, quantity } : item
-        ));
+        updateCart(
+            cart.map((item) =>
+                item.id === productId ? { ...item, quantity } : item
+            )
+        );
     };
 
     const clearCart = () => updateCart([]);
 
-    const getTotalPrice = () => {
-        return cart.reduce((total, item) => total + item.price * item.quantity, 0);
-    };
+    const getTotalPrice = () =>
+        cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
-    const getTotalItems = () => {
-        return cart.reduce((total, item) => total + item.quantity, 0);
-    };
+    const getTotalItems = () =>
+        cart.reduce((total, item) => total + item.quantity, 0);
 
     return (
         <CartContext.Provider

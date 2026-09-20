@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, useRef, ReactNode } from 'react';
 import { Toast } from '@/app/components/ui/Toast';
 
 type ToastType = 'success' | 'error' | 'warning' | 'info';
@@ -12,11 +12,19 @@ interface ToastContextType {
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
 export function ToastProvider({ children }: { children: ReactNode }) {
-    const [toasts, setToasts] = useState<{ id: number; message: string; type: ToastType; duration: number }[]>([]);
-    let idCounter = 0;
+    const [toasts, setToasts] = useState<
+        { id: number; message: string; type: ToastType; duration: number }[]
+    >([]);
 
-    const showToast = (message: string, type: ToastType = 'info', duration = 5000) => {
-        const id = idCounter++;
+    // ✅ useRef : la valeur persiste entre les rendus sans provoquer de re-render
+    const idCounter = useRef(0);
+
+    const showToast = (
+        message: string,
+        type: ToastType = 'info',
+        duration = 5000
+    ) => {
+        const id = idCounter.current++;
         setToasts((prev) => [...prev, { id, message, type, duration }]);
     };
 

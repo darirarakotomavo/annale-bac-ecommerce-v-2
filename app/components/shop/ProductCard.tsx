@@ -2,8 +2,8 @@
 
 import { Product } from "@/app/types";
 import { useCart } from "@/app/context/CartContext";
-import { ShoppingCart } from "lucide-react";
-import { Button } from "@/app/components/ui/Button";
+import { useToast } from "@/app/context/ToastContext";
+import { ShoppingCart, MessageCircle } from "lucide-react";
 import { Badge } from "@/app/components/ui/Badge";
 import {
   IconMaths,
@@ -27,14 +27,35 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const { addToCart } = useCart();
+  const { showToast } = useToast();
+
   const isPopular = product.isPopular;
   const isEnseignant = product.isEnseignant;
 
+  // WhatsApp (inchangé)
   const phoneNumber = "261322462274";
   const message = `Bonjour, je souhaite commander : ${product.name} (${product.price} Ar).`;
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   const IconComponent = iconMap[product.icon] || IconMaths;
+
+  // ✅ Ajout au panier + toast
+  // const handleAddToCart = () => {
+  //   addToCart({
+  //     id: (product as any).id ?? (product as any)._id?.toString() ?? product.name,
+  //     name: product.name,
+  //     price: product.price,
+  //     icon: product.icon ?? "📚",
+  //   });
+  //   showToast(`✅ ${product.name} ajouté au panier`, "success", 3000);
+  // };
+
+const handleAddToCart = () => {
+    addToCart(product);
+    showToast(`✅ ${product.name} ajouté au panier`, "success", 3000);
+};
+
+
 
   return (
     <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
@@ -45,7 +66,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </div>
           <div className="flex flex-wrap gap-1">
             {isPopular && <Badge variant="warning">⭐ Populaire</Badge>}
-            {isEnseignant && <Badge variant="purple">👨‍🏫 Enseignant</Badge>}
+            {isEnseignant && <Badge variant="purple">👨🏫 Enseignant</Badge>}
           </div>
         </div>
 
@@ -65,36 +86,41 @@ export default function ProductCard({ product }: ProductCardProps) {
         </ul>
 
         <div className="flex flex-col gap-3">
-          <div className="flex items-end justify-between">
-            <div>
-              <span className="text-2xl font-bold text-emerald-600">
-                {product.price} Ariary
-              </span>
-              {product.pages > 0 && (
-                <p className="text-xs text-gray-400">{product.pages} pages</p>
-              )}
-              <p className="text-xs text-orange-500 font-medium mt-1">
-                💬 Prix négociable
-              </p>
-            </div>
-            <div className="flex gap-2">
-              <Button
-                variant="primary"
-                size="sm"
-                onClick={() => addToCart(product)}
-                className="flex items-center gap-1"
-              >
-                <ShoppingCart size={16} /> Ajouter
-              </Button>
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1 text-sm"
-              >
-                💬
-              </a>
-            </div>
+          <div>
+            <span className="text-2xl font-bold text-emerald-600">
+              {product.price} Ariary
+            </span>
+            {product.pages > 0 && (
+              <p className="text-xs text-gray-400">{product.pages} pages</p>
+            )}
+            <p className="text-xs text-orange-500 font-medium mt-1">
+              💬 Prix négociable
+            </p>
+          </div>
+
+          {/* ✅ Deux boutons séparés, largeur égale */}
+          <div className="flex gap-2">
+            {/* 🛒 Ajouter au panier — ROUGE */}
+            <button
+              onClick={handleAddToCart}
+              className="flex-1 bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded-lg font-semibold transition inline-flex items-center justify-center gap-1.5 text-sm"
+              aria-label={`Ajouter ${product.name} au panier`}
+            >
+              <ShoppingCart size={16} />
+              Ajouter
+            </button>
+
+            {/* 💬 WhatsApp — VERT */}
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded-lg font-semibold transition inline-flex items-center justify-center gap-1.5 text-sm"
+              aria-label="Commander sur WhatsApp"
+            >
+              <MessageCircle size={16} />
+              WhatsApp
+            </a>
           </div>
         </div>
       </div>

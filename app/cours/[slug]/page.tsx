@@ -54,7 +54,7 @@ export default async function CourseDetailPage({ params }: { params: { slug: str
                                     <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">{course.title}</h1>
                                     <p className="text-gray-500 mt-2 text-lg">{course.description}</p>
                                 </div>
-                                <div className="bg-gray-50 p-6 rounded-lg min-w-[180px] text-center">
+                                <div className="bg-gray-50 p-6 rounded-lg min-w-45 text-center">
                                     <p className="text-sm text-gray-500">Prix</p>
                                     <p className="text-2xl font-bold text-emerald-600">{course.price} Ar</p>
                                     <a

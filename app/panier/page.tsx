@@ -74,7 +74,7 @@ export default function PanierPage() {
                                                     <Plus size={16} />
                                                 </button>
                                             </div>
-                                            <span className="font-bold text-emerald-600 min-w-[60px] text-right">
+                                            <span className="font-bold text-emerald-600 min-w-15 text-right">
                                                 {item.price * item.quantity} Ar
                                             </span>
                                             <button
