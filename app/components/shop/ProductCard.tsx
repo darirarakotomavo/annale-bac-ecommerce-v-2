@@ -31,7 +31,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   const isEnseignant = product.isEnseignant;
 
   const phoneNumber = "261322462274";
-  const message = `Bonjour, je souhaite commander : ${product.name} (${product.price} €).`;
+  const message = `Bonjour, je souhaite commander : ${product.name} (${product.price} Ar).`;
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   const IconComponent = iconMap[product.icon] || IconMaths;

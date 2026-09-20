@@ -31,7 +31,7 @@ export default function PanierPage() {
     }
 
     const phoneNumber = '261322462274';
-    const message = `Bonjour, je souhaite commander les produits suivants :\n${cart.map(item => `- ${item.name} (${item.quantity}x) : ${item.price * item.quantity} €`).join('\n')}\nTotal : ${getTotalPrice()} €`;
+    const message = `Bonjour, je souhaite commander les produits suivants :\n${cart.map(item => `- ${item.name} (${item.quantity}x) : ${item.price * item.quantity} Ar`).join('\n')}\nTotal : ${getTotalPrice()} Ar`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     return (
@@ -53,7 +53,7 @@ export default function PanierPage() {
                                             <span className="text-3xl">{item.icon}</span>
                                             <div>
                                                 <h3 className="font-semibold text-gray-800">{item.name}</h3>
-                                                <p className="text-sm text-gray-500">{item.price} €</p>
+                                                <p className="text-sm text-gray-500">{item.price} Ar</p>
                                             </div>
                                         </div>
                                         <div className="flex items-center gap-4">
@@ -75,7 +75,7 @@ export default function PanierPage() {
                                                 </button>
                                             </div>
                                             <span className="font-bold text-emerald-600 min-w-[60px] text-right">
-                                                {item.price * item.quantity} €
+                                                {item.price * item.quantity} Ar
                                             </span>
                                             <button
                                                 onClick={() => removeFromCart(item.id)}
@@ -94,7 +94,7 @@ export default function PanierPage() {
                     <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
                         <div>
                             <p className="text-gray-600">
-                                Total : <span className="font-bold text-2xl text-emerald-600">{getTotalPrice()} €</span>
+                                Total : <span className="font-bold text-2xl text-emerald-600">{getTotalPrice()} Ar</span>
                             </p>
                             <p className="text-sm text-gray-500">{getTotalItems()} article(s)</p>
                         </div>

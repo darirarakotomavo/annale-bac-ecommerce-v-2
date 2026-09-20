@@ -22,7 +22,7 @@ export default async function CourseDetailPage({ params }: { params: { slug: str
     }
 
     const phoneNumber = '261322462274';
-    const message = `Bonjour, je souhaite m'inscrire au cours : ${course.title} (${course.price} €).`;
+    const message = `Bonjour, je souhaite m'inscrire au cours : ${course.title} (${course.price} Ar).`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     return (
@@ -56,7 +56,7 @@ export default async function CourseDetailPage({ params }: { params: { slug: str
                                 </div>
                                 <div className="bg-gray-50 p-6 rounded-lg min-w-[180px] text-center">
                                     <p className="text-sm text-gray-500">Prix</p>
-                                    <p className="text-2xl font-bold text-emerald-600">{course.price} €</p>
+                                    <p className="text-2xl font-bold text-emerald-600">{course.price} Ar</p>
                                     <a
                                         href={whatsappUrl}
                                         target="_blank"

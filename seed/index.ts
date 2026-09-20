@@ -59,17 +59,17 @@ const productsData = [
     ],
   },
   {
-    id: "video-informatique-1",
-    name: "Cours Informatique - Débutant",
+    id: "Cours-informatique-1",
+    name: "Cours Informatique - Débutant ou avancé",
     subject: "Vidéo",
-    description: "Vidéo complète pour débuter en informatique",
-    price: 3000,
+    description: "Technique  pour débuter en informatique",
+    price: 30000,
     pages: 0,
     icon: "🎬",
     features: [
-      "Durée : 45 min",
-      "Téléchargement possible",
-      "Lien YouTube inclus",
+      "Durée : 40 Heures",
+      "HTML, CSS, JavaScript, React, Next.js, Typescript,Tailwind CSS",
+      " Bases de données: Mongodb et Firebase, en suivant des vidéos Youtube avec code source",
     ],
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
@@ -130,14 +130,15 @@ const coursesData = [
 const journalPostsData = [
   {
     title: "📘 Planning  pour réussir le  Bac 2027",
-    slug: "cours et exercices corrigés pour-reussir-bac-2027",
+    slug: "cours et exercices corrigés pour chaque pour reussir le bac-2027",
     excerpt:
       "Un planning intensif mensuel pour maximiser vos chances de réussite au Bac 2027.",
     content: `# Préparation pour le Bac 2027
 
 ## Objectif :  Maîtriser d'abord les matières principales (Maths et Physique) puis les autres matières.
 
-Ce planning est conçu pour les élèves qui veulent une préparation intensive et structurée jusqu'au jour J (20 juillet 2026). Chaque journée est décomposée en sessions de travail, avec des objectifs clairs.
+Ce planning est conçu pour les élèves qui veulent une préparation intensive et structurée jusqu'au jour J du bac 2027 (juillet 2027).
+ Chaque journée est décomposée en sessions de travail, avec des objectifs clairs.
 
 ---
 
@@ -178,14 +179,14 @@ Ce planning est conçu pour les élèves qui veulent une préparation intensive 
 
 ### 🚀 Phase 3 – Intensif final (J16 à J27)
 
-- **J16** : Annales 2023 – Maths (sujet complet).
-- **J17** : Annales 2023 – Physique (sujet complet).
+- **J16** : Annales 2026 – Maths (sujet complet).
+- **J17** : Annales 2026 – Physique (sujet complet).
 - **J18** : Correction et analyse des copies.
 - **J19** : Simulation – Maths (9h-12h) puis correction.
 - **J20** : Simulation – Physique (14h-17h) puis correction.
 - **J21** : Révision des méthodologies (rédaction, gestion du temps).
-- **J22** : Annales 2022 – Maths.
-- **J23** : Annales 2022 – Physique.
+- **J22** : Annales 2025 – Maths.
+- **J23** : Annales 2025 – Physique.
 - **J24** : Correction + reprise des erreurs.
 - **J25** : Simulation complète – Maths + Physique en conditions réelles.
 - **J26** : Correction de la simulation – dernier point de méthode.
@@ -208,7 +209,8 @@ Ce planning est conçu pour les élèves qui veulent une préparation intensive 
 
 ## 💪 Motivation
 
-Chaque jour compte. Ce planning est exigeant mais vous garantit une progression constante. Tenez-vous à ce rythme, et le jour du Bac, vous serez prêt(e) !
+Chaque jour compte. Ce planning est exigeant mais vous garantit une progression constante. 
+Tenez-vous à ce rythme, et le jour du Bac, vous serez prêt(e) !
 
 **Bon courage, vous allez réussir !** 🎓`,
     tags: ["préparation", "bac2027", "planning", "intensif"],
@@ -287,11 +289,11 @@ async function seed() {
 
   console.log("📋 Liste des produits :");
   products.forEach((p) =>
-    console.log(`  - ${p.icon} ${p.name} (${p.price} €)`),
+    console.log(`  - ${p.icon} ${p.name} (${p.price} Ar) - ${p.pages} pages`),
   );
 
   console.log("📋 Liste des cours :");
-  courses.forEach((c) => console.log(`  - 🎓 ${c.title} (${c.price} €)`));
+  courses.forEach((c) => console.log(`  - 🎓 ${c.title} (${c.price} Ar)`));
 
   console.log("📋 Liste des articles du journal :");
   journalPosts.forEach((post) =>

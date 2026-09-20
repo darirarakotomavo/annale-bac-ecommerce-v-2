@@ -46,7 +46,7 @@ export default function CourseCard({ course }: CourseCardProps) {
           </p>
           <div className="flex items-center justify-between mt-auto">
             <span className="text-lg font-bold text-emerald-600">
-              {course.price} €
+              {course.price} Ar
             </span>
             <span className="text-sm text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
               {course.studentsCount || 0} étudiants

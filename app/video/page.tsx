@@ -37,7 +37,7 @@ export default async function VideosPage() {
                                         <CardBody>
                                             <h3 className="font-bold text-lg text-gray-800">{video.name}</h3>
                                             <p className="text-sm text-gray-500">{video.description}</p>
-                                            <p className="text-sm font-bold text-emerald-600 mt-2">{video.price} €</p>
+                                            <p className="text-sm font-bold text-emerald-600 mt-2">{video.price} Ar</p>
                                         </CardBody>
                                     </Card>
                                 );
